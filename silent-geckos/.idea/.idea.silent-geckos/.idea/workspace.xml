@@ -11,9 +11,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/LevelState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenuController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/Settings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/LevelSelect.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="24LINq9GtaTMsixhOTIqUfZmwTf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -60,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643403406569</updated>
-      <workItem from="1643403411307" duration="6834000" />
+      <workItem from="1643403411307" duration="8709000" />
     </task>
     <servers />
   </component>
@@ -72,141 +71,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/ProgressBar.cs</url>
-          <line>46</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\ProgressBar.cs" initialLine="45" containingFunctionPresentation="method 'StartLevel'">
-            <startOffsets>
-              <option value="1104" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1136" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs</url>
-          <line>15</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\MainMenu.cs" initialLine="15" containingFunctionPresentation="method 'OnLevelSelectButton'">
-            <startOffsets>
-              <option value="318" />
-            </startOffsets>
-            <endOffsets>
-              <option value="357" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs</url>
-          <line>16</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\MainMenu.cs" initialLine="16" containingFunctionPresentation="method 'OnLevelSelectButton'">
-            <startOffsets>
-              <option value="360" />
-            </startOffsets>
-            <endOffsets>
-              <option value="397" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs</url>
-          <line>17</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\MainMenu.cs" initialLine="17" containingFunctionPresentation="method 'OnLevelSelectButton'">
-            <startOffsets>
-              <option value="400" />
-            </startOffsets>
-            <endOffsets>
-              <option value="434" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs</url>
-          <line>22</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\MainMenu.cs" initialLine="22" containingFunctionPresentation="method 'OnSettingsButton'">
-            <startOffsets>
-              <option value="485" />
-            </startOffsets>
-            <endOffsets>
-              <option value="520" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs</url>
-          <line>23</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\MainMenu.cs" initialLine="23" containingFunctionPresentation="method 'OnSettingsButton'">
-            <startOffsets>
-              <option value="526" />
-            </startOffsets>
-            <endOffsets>
-              <option value="560" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs</url>
-          <line>24</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\MainMenu.cs" initialLine="24" containingFunctionPresentation="method 'OnSettingsButton'">
-            <startOffsets>
-              <option value="566" />
-            </startOffsets>
-            <endOffsets>
-              <option value="600" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs</url>
-          <line>29</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\MainMenu.cs" initialLine="29" containingFunctionPresentation="method 'OnQuitButton'">
-            <startOffsets>
-              <option value="650" />
-            </startOffsets>
-            <endOffsets>
-              <option value="688" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs</url>
-          <line>30</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\MainMenu.cs" initialLine="30" containingFunctionPresentation="method 'OnQuitButton'">
-            <startOffsets>
-              <option value="694" />
-            </startOffsets>
-            <endOffsets>
-              <option value="713" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/MainMenu.cs</url>
-          <line>34</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\MainMenu.cs" initialLine="34" containingFunctionPresentation="method 'OnStartGame'">
-            <startOffsets>
-              <option value="761" />
-            </startOffsets>
-            <endOffsets>
-              <option value="793" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

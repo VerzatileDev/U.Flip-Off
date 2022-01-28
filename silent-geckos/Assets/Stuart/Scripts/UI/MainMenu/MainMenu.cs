@@ -2,21 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 	private MainMenuController mainMenuController;
-	private void Awake()
-	{
-		mainMenuController = GetComponentInParent<MainMenuController>();
-	}
-
+	private void Awake()=> mainMenuController = GetComponentInParent<MainMenuController>();
+	
 	public void OnLevelSelectButton()
 	{
 		Console.WriteLine("Open Level Select");
 		mainMenuController.ShowLevelSelect();
 		mainMenuController.HideMainMenu();
-
 	}
     public void OnSettingsButton()
     {
@@ -33,7 +29,7 @@ public class MainMenu : MonoBehaviour
     public void OnStartGame()
     {
 	    Console.WriteLine("Start Game");
+	    SceneManager.LoadSceneAsync(1);
 	    mainMenuController.HideMainMenu();
-
     }
 }

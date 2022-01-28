@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,10 +11,21 @@ public class MainMenuController : MonoBehaviour
    private static readonly float AnimationTime = 0.5f;
 
     public void ShowLevelSelect() => StartCoroutine(ShowCanvas(LevelSelectCG, 1.0f));
+    public void HideLevelSelect() => StartCoroutine(ShowCanvas(LevelSelectCG, 0.0f));
+
     public void HideMainMenu() => StartCoroutine(ShowCanvas(MainMenuCG, 0.0f));
+    public void ShowMainMenu() => StartCoroutine(ShowCanvas(MainMenuCG, 1.0f));
+
     public void ShowSettings() =>StartCoroutine(ShowCanvas(SettingsCG, 1.0f));
-    
-    
+    public void HideSettings() =>StartCoroutine(ShowCanvas(SettingsCG, 0.0f));
+
+    private void Awake()
+    {
+        ShowMainMenu();
+        HideLevelSelect();
+        HideSettings();
+    }
+
     private static IEnumerator ShowCanvas(CanvasGroup group, float target)
     {
         if (group == null) yield break;

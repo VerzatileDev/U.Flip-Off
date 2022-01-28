@@ -32,5 +32,6 @@ public class FlipScript : MonoBehaviour
         player.transform.Translate(position);
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(player.GetComponent<Rigidbody2D>().velocity.x,player.GetComponent<Rigidbody2D>().velocity.y*-1,0);
         player.GetComponent<Rigidbody2D>().gravityScale *= -1;
+        player.transform.localScale = new Vector3(1, player.transform.localScale.y * -1, 1);
     }
 }

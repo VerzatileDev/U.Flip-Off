@@ -16,19 +16,26 @@ public class MainMenu : MonoBehaviour
 	}
     public void OnSettingsButton()
     {
-	    Console.WriteLine("Open Settings");
+	    Debug.Log("Open Settings");
 	    mainMenuController.ShowSettings();
+	    mainMenuController.HideMainMenu();
+
+    }
+    public void OnTutorialButton()
+    {
+	    Debug.Log("Open Tutorial");
+	    mainMenuController.ShowTutorial();
 	    mainMenuController.HideMainMenu();
 
     }
     public void OnQuitButton()
     {
-	    Console.WriteLine("Application quit");
+	    Debug.Log("Application quit");
 	    Application.Quit();
     }
     public void OnStartGame()
     {
-	    Console.WriteLine("Start Game");
+	    Debug.Log("Start Game");
 	    SceneManager.LoadSceneAsync(1);
 	    mainMenuController.HideMainMenu();
     }

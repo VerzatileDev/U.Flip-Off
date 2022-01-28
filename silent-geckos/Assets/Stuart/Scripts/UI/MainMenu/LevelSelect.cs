@@ -25,9 +25,9 @@ public class LevelSelect : MonoBehaviour
     public void OnLevelSelect(int level)
     {
 	    
-	    if(level==0) Debug.LogWarning("Level number cannot be 0");
-	    else if(SceneManager.sceneCount>level) SceneManager.LoadSceneAsync(level);
-	    else Debug.LogWarning("Level not available");
+	    if(level==0) Debug.LogError("Level number cannot be 0");
+	    else if(SceneManager.sceneCount>=level) SceneManager.LoadSceneAsync(level);
+	    else Debug.LogError("Level not available");
 
     }
 }

@@ -19,7 +19,7 @@ public class Settings : MonoBehaviour
 			mainMenuController.ShowMainMenu();
 			mainMenuController.HideSettings();
 		}
-		else Debug.LogWarning("Main menu controller NULL");
+		else Debug.LogError("Main menu controller NULL");
 		
 	}
 }

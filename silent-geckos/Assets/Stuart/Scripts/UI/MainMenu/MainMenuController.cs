@@ -8,6 +8,8 @@ public class MainMenuController : MonoBehaviour
    [SerializeField] private CanvasGroup LevelSelectCG;
    [SerializeField]private CanvasGroup MainMenuCG;
    [SerializeField]private CanvasGroup SettingsCG;
+   [SerializeField]private CanvasGroup TutorialCG;
+
    private static readonly float AnimationTime = 0.5f;
 
     public void ShowLevelSelect() => StartCoroutine(ShowCanvas(LevelSelectCG, 1.0f));
@@ -18,12 +20,23 @@ public class MainMenuController : MonoBehaviour
 
     public void ShowSettings() =>StartCoroutine(ShowCanvas(SettingsCG, 1.0f));
     public void HideSettings() =>StartCoroutine(ShowCanvas(SettingsCG, 0.0f));
-
+    public void ShowTutorial() =>StartCoroutine(ShowCanvas(TutorialCG, 1.0f));
+    public void HideTutorial() =>StartCoroutine(ShowCanvas(TutorialCG, 0.0f));
     private void Awake()
     {
-        ShowMainMenu();
-        HideLevelSelect();
-        HideSettings();
+        InitLoad(true, MainMenuCG);
+        InitLoad(false, TutorialCG);
+        InitLoad(false, SettingsCG);
+        InitLoad(false, LevelSelectCG);
+
+    }
+
+    void InitLoad(bool state, CanvasGroup group)
+    {
+        group.interactable = state;
+        group.blocksRaycasts = state;
+        group.alpha = state ? 1 : 0;
+        
     }
 
     private static IEnumerator ShowCanvas(CanvasGroup group, float target)

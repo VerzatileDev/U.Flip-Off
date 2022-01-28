@@ -39,10 +39,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18076">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2184">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18076" />
+      <option name="pid" value="2184" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -58,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643403406569</updated>
-      <workItem from="1643403411307" duration="3943000" />
+      <workItem from="1643403411307" duration="4664000" />
     </task>
     <servers />
   </component>
@@ -70,24 +70,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/ProgressBar.cs</url>
-          <line>23</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\ProgressBar.cs" initialLine="25" containingFunctionPresentation="method 'Start'">
-            <startOffsets>
-              <option value="628" />
-            </startOffsets>
-            <endOffsets>
-              <option value="641" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

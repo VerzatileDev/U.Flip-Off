@@ -8,7 +8,7 @@ public class LevelController : MonoBehaviour
 	[SerializeField] private LevelState levelState;
 	
 
-	private void Awake()
+	private void Start()
 	{
 		LevelStart();
 	}

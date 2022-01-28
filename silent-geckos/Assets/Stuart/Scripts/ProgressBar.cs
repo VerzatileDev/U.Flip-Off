@@ -8,39 +8,45 @@ using UnityEngine.UI;
 public class ProgressBar : MonoBehaviour
 {
 	private Image image;
-	[SerializeField]private bool isHeaven = true;
+	[SerializeField] private LevelState levelState;
+	[SerializeField] private bool isHeaven = true;
 	private Coroutine ticker;
 	[SerializeField] float refreshRateSeconds;
 	[SerializeField] private float incrementPerSecond;
 	private void Awake() => image = GetComponent<Image>();
-	
-	
-	//private void OnEnable() PetesScript.OnPhaseChange += UpdateDirection
-	
-	//private void OnDisable() =>PetesScript.Default.LeftClick.started += UpdateDirection;
 
-	private void Start()
+
+	private void OnEnable()
 	{
-		StartLevel();
+		//PetesScript.OnPhaseChange += UpdateDirection;
+		levelState.OnLevelStart += StartLevel;
+		levelState.OnLevelEnd += StopLevel;
 	}
 
-	private void UpdateDirection(bool _isHeaven)
+	private void OnDisable()
 	{
-		isHeaven = _isHeaven;
+		//PetesScript.OnPhaseChange-= UpdateDirection;
+		levelState.OnLevelStart -= StartLevel;
+		levelState.OnLevelEnd -= StopLevel;
 	}
+
+
+	private void UpdateDirection(bool _isHeaven) => isHeaven = _isHeaven;
+	
 
 	private void UpdateSlider(float amount)
 	{
 		if (isHeaven) image.fillAmount += amount;
 		else image.fillAmount -= amount;
 	}
-	public void StartLevel()
+
+	private void StartLevel()
 	{
 		StopLevel();
 		ticker = StartCoroutine(Tick());
 	}
 
-	public void StopLevel()
+	private void StopLevel()
 	{
 		StopCoroutine(Tick());
 		ticker = null;
@@ -55,8 +61,8 @@ public class ProgressBar : MonoBehaviour
 		}
 	}
 
-	private float  ConvertToSlideVal(float _incrementPerSecond)
+	private float ConvertToSlideVal(float _incrementPerSecond)
 	{
-		return (refreshRateSeconds*_incrementPerSecond)/25;
+		return (refreshRateSeconds * _incrementPerSecond) / 25;
 	}
 }

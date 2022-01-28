@@ -13,19 +13,20 @@ public class ProgressBar : MonoBehaviour
 	private Coroutine ticker;
 	[SerializeField] float refreshRateSeconds;
 	[SerializeField] private float incrementPerSecond;
+	[SerializeField] private FlipScript flipScript;
 	private void Awake() => image = GetComponent<Image>();
 
 
 	private void OnEnable()
 	{
-		//PetesScript.OnPhaseChange += UpdateDirection;
+		//flipScript.OnPhaseChange += UpdateDirection;
 		levelState.OnLevelStart += StartLevel;
 		levelState.OnLevelEnd += StopLevel;
 	}
 
 	private void OnDisable()
 	{
-		//PetesScript.OnPhaseChange-= UpdateDirection;
+		//flipScript.OnPhaseChange-= UpdateDirection;
 		levelState.OnLevelStart -= StartLevel;
 		levelState.OnLevelEnd -= StopLevel;
 	}

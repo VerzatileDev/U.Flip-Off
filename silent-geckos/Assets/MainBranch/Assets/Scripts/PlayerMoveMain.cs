@@ -60,7 +60,8 @@ public class PlayerMoveMain : MonoBehaviour
 
     private void FixedUpdate() //Called multiples time per frame
     {
-        isGrounded = Physics2D.OverlapCircle(transform.position, checkRadius, jumpableObjects);
+        GameObject groundCheck = GameObject.FindWithTag("GroundCheck");
+        isGrounded = Physics2D.IsTouchingLayers(groundCheck.GetComponentInChildren<BoxCollider2D>(), jumpableObjects);
         if (isGrounded && !isJumping)
         {
             jumpsAvailable = maxJumpCount;

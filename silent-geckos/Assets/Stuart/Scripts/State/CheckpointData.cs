@@ -49,4 +49,11 @@ public class CheckpointData : ScoreDataSO
         checkpoint2 = false;
         checkpoint3 = false;
     }
+    
+    public void Respawn(ScoreDataSO scoreDataSO)
+    {
+        scoreDataSO.heavenCoins = heavenCoins;
+        scoreDataSO.hellCoins = hellCoins;
+        scoreDataSO.progressBar = progressBar;
+    }
 }

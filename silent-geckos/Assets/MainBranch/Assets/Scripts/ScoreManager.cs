@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public TextMeshProUGUI goodCounter;
     public TextMeshProUGUI evilCounter;
-  public  int goodScore;
+    public  int goodScore;
     public int evilScore;
     [SerializeField] private ScoreDataSO scoreDataSo;
     // Start is called before the first frame update

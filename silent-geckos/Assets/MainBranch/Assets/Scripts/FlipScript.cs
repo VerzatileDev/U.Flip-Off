@@ -12,6 +12,7 @@ public class FlipScript : MonoBehaviour
 
     void Start()
     {
+        GravityIsFlipped = false;
         player = GameObject.FindWithTag("Player");
     }
 

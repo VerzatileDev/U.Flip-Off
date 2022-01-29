@@ -732,7 +732,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 161.9
+  m_fontSize: 162.2
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 161
+  m_fontSize: 161.3
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1463,23 +1463,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8720317896177869600, guid: ce9fe4546326f0147bad414dd1c4cb25,
-        type: 3}
-      propertyPath: jumpForce
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720317896177869600, guid: ce9fe4546326f0147bad414dd1c4cb25,
-        type: 3}
-      propertyPath: maxJumpCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8720317896177869600, guid: ce9fe4546326f0147bad414dd1c4cb25,
-        type: 3}
-      propertyPath: movementSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 251760279, guid: ce9fe4546326f0147bad414dd1c4cb25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce9fe4546326f0147bad414dd1c4cb25, type: 3}
 --- !u!1001 &1827445889
 PrefabInstance:
@@ -1562,7 +1546,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1556833012}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046600739}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58e4b7e5128423f4badec5df8a601dc7, type: 3}
@@ -1806,51 +1790,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.88, y: 0.56}
   m_EdgeRadius: 0
---- !u!1 &2046600739 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5088860917604546470, guid: ce9fe4546326f0147bad414dd1c4cb25,
-    type: 3}
-  m_PrefabInstance: {fileID: 1556833012}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &2046600741
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046600739}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.000000029802322, y: -0.0023086257}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
-    newSize: {x: 0.2, y: 0.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.19307402, y: 0.19999993}
-  m_EdgeRadius: 0
---- !u!114 &2046600745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046600739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca47b51e0450f5641acd40981f32f611, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
 --- !u!1001 &342533016548401866
 PrefabInstance:
   m_ObjectHideFlags: 0

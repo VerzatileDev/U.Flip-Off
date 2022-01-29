@@ -7,7 +7,8 @@ public class MainMenu : MonoBehaviour
 {
 	private MainMenuController mainMenuController;
 	private void Awake()=> mainMenuController = GetComponentInParent<MainMenuController>();
-	
+	[SerializeField] private CheckpointData data;
+
 	public void OnLevelSelectButton()
 	{
 		Console.WriteLine("Open Level Select");
@@ -36,7 +37,12 @@ public class MainMenu : MonoBehaviour
     public void OnStartGame()
     {
 	    Debug.Log("Start Game");
+	    WipeCheckPoints();
 	    SceneManager.LoadSceneAsync(2);
 	    mainMenuController.HideMainMenu();
+    }
+    private void WipeCheckPoints()
+    {
+	   // data.Wipe();
     }
 }

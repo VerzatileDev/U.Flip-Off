@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelSelect : MonoBehaviour
 {
     private MainMenuController mainMenuController;
+    [SerializeField] private CheckpointData data;
     private void Awake()
     {
 	    mainMenuController = GetComponentInParent<MainMenuController>();
@@ -26,8 +27,17 @@ public class LevelSelect : MonoBehaviour
     {
 	    
 	    if(level==0) Debug.LogError("Level number cannot be 0");
-	    else if(SceneManager.sceneCount>=level) SceneManager.LoadSceneAsync(level+1);
+	    else if (SceneManager.sceneCount >= level)
+	    {
+		    WipeCheckPoints();
+		    SceneManager.LoadSceneAsync(level+1);
+	    }
 	    else Debug.LogError("Level not available");
 
+    }
+
+    private void WipeCheckPoints()
+    {
+	   // data.Wipe();
     }
 }

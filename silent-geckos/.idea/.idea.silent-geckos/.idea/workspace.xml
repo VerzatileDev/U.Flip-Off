@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43f101a7-6208-46b9-89d4-9aeaecc7943c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/SO/CumusScoreData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/SO/CumusScoreData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/GameOverUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/GameOverUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/UpgradeScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/UpgradeScreen.cs" afterDir="false" />
-    </list>
+    <list default="true" id="43f101a7-6208-46b9-89d4-9aeaecc7943c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643403406569</updated>
       <workItem from="1643403411307" duration="9878000" />
-      <workItem from="1643451587566" duration="15434000" />
+      <workItem from="1643451587566" duration="15734000" />
     </task>
     <servers />
   </component>

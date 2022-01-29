@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using Unity.Mathematics;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,7 +18,7 @@ public class ProgressBar : MonoBehaviour
 	[SerializeField] private FlipScript flipScript;
 	private void Awake() => image = GetComponent<Image>();
     [SerializeField] private ScoreDataSO scoreDataSo;
-
+    [SerializeField] private Image sliderImage;
 
 	private void OnEnable()
 	{
@@ -37,13 +39,7 @@ public class ProgressBar : MonoBehaviour
 	private void UpdateDirection(bool _isHeaven) => isHeaven = _isHeaven;
 	
 
-	private void UpdateSlider(float amount)
-	{
-		if (isHeaven) image.fillAmount += amount;
-		else image.fillAmount -= amount;
-        scoreDataSo.progressBar = image.fillAmount;
 
-    }
 
 	private void StartLevel()
 	{
@@ -66,8 +62,37 @@ public class ProgressBar : MonoBehaviour
 		}
 	}
 
+
+	
+	private void UpdateSlider(float amount)
+	{
+		const int range=300;
+		RectTransform rectTransform = sliderImage.GetComponent<RectTransform>();
+		Vector3 currentPos = rectTransform.localPosition;
+		if (isHeaven)
+		{
+			if (currentPos.x +amount< range) rectTransform.localPosition = new Vector3(currentPos.x+=amount,currentPos.y,currentPos.z);
+			
+		}
+		else
+		{
+			if (currentPos.x -amount> range*-1) rectTransform.localPosition = new Vector3(currentPos.x-=amount,currentPos.y,currentPos.z);
+
+	
+			
+		}
+		scoreDataSo.progressBar = Map((int)rectTransform.localPosition.x,range*-1, range, 0,1);
+
+	}
 	private float ConvertToSlideVal(float _incrementPerSecond)
 	{
 		return (refreshRateSeconds * _incrementPerSecond) / 25;
+	}
+
+	private static float Map(float value, int startLow, int startHigh, int toLow, int toHigh) 
+	{
+		float val =(value - startLow) * (toHigh - toLow) / (startHigh - startLow) + toLow;
+		Debug.Log(val);
+		return val;
 	}
 }

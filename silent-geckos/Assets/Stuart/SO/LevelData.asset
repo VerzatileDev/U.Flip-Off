@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heavenCoins: 0
   hellCoins: 0
-  progressBar: 0
+  progressBar: 0.006666667

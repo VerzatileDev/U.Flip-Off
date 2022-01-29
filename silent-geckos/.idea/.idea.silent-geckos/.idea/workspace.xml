@@ -3,16 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="43f101a7-6208-46b9-89d4-9aeaecc7943c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scenes/LevelEndMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scenes/LevelEndMenu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scenes/MainMenu.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/MainMenu.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/LevelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/LevelController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/ScoreDataSO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/ScoreDataSO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/GameOverUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/GameOverUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Editor/Editor_StuartLevelLoading.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Editor_StuartLevelLoading.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/GameOverController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/GameOverController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/GameOverUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/GameOverUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/MainMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/MainMenuController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1643403406569</updated>
       <workItem from="1643403411307" duration="9878000" />
-      <workItem from="1643451587566" duration="8208000" />
+      <workItem from="1643451587566" duration="11629000" />
     </task>
     <servers />
   </component>
@@ -89,24 +84,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Editor/Editor_StuartLevelLoading.cs</url>
-          <line>14</line>
-          <properties documentPath="C:\Users\heaths8\Desktop\silent-geckos-Jam\silent-geckos\Assets\Editor\Editor_StuartLevelLoading.cs" initialLine="14" containingFunctionPresentation="method 'OnInspectorGUI'">
-            <startOffsets>
-              <option value="485" />
-            </startOffsets>
-            <endOffsets>
-              <option value="517" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

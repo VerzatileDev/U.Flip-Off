@@ -46,7 +46,7 @@ public class MainMenuController : MonoBehaviour
         
     }
     //fades ui change
-    private static IEnumerator ShowCanvas(CanvasGroup group, float target)
+    public static IEnumerator ShowCanvas(CanvasGroup group, float target)
     {
         if (group == null) yield break;
         float startAlpha = group.alpha;

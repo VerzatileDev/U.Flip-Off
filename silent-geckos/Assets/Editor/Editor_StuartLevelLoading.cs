@@ -8,11 +8,9 @@ public class Editor_StuartLevelLoading : Editor
 {
     public override void  OnInspectorGUI () {
         LevelController levelController = (LevelController)target;
-        if(GUILayout.Button("End Level Win")) {
+        if(GUILayout.Button("End Level")) {
             levelController.LevelEnd(true); 
         }
-        if(GUILayout.Button("End Level Lose")) {
-            levelController.LevelEnd(false); 
-        }
+       
         DrawDefaultInspector();
     }}

@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bullet;
-    float cooldownDuration = 5f;
+    float cooldownDuration = 0.5f;
     bool cooldown = false;
 
 
@@ -15,12 +15,22 @@ public class Weapon : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("k"))
         {
-            Shoot();
+            if (cooldown == false)
+            {
+                Shoot();
+                cooldown = true;
+                StartCoroutine(Cooldown());
+            }
         }
     }
     void Shoot()
 
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+    }
+    IEnumerator Cooldown()
+    {
+        yield return new WaitForSeconds(cooldownDuration);
+        cooldown = false;
     }
 }

@@ -4,6 +4,8 @@ public class PlayerMoveMain : MonoBehaviour
 {
     private Rigidbody2D PlayerBody;
 
+    [SerializeField] private Animator animator;
+
     [Header("Set Player Forces")]
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
@@ -45,6 +47,14 @@ public class PlayerMoveMain : MonoBehaviour
     {
         Processinputs();
         Animate();
+        if (PlayerBody.velocity.x != 0)
+        {
+            animator.SetBool("isRunning", true);
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
+        }
     }
 
     private void Processinputs()

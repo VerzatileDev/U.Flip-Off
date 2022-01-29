@@ -12,6 +12,7 @@ public class FlipScript : MonoBehaviour
 
     void Start()
     {
+        GravityIsFlipped = false;
         player = GameObject.FindWithTag("Player");
     }
 
@@ -38,7 +39,7 @@ public class FlipScript : MonoBehaviour
     IEnumerator FlipCooldown()
     {
         isFlipOnCooldown = true;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         isFlipOnCooldown = false;
     }
 }

@@ -50,7 +50,7 @@ public class PlayerMoveMain : MonoBehaviour
     {
         gravityState = FlipScript.GravityIsFlipped;
         moveDirection = Input.GetAxis("Horizontal"); // Scale of -1 to 1
-        if (Input.GetButtonDown("Jump") && jumpsAvailable > 0)
+        if (Input.GetButtonDown("Jump") && (jumpsAvailable > 0 || isGrounded))
         {
             isJumping = true;
         }

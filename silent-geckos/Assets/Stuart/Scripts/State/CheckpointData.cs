@@ -18,7 +18,6 @@ public class CheckpointData : ScoreDataSO
     {
         heavenCoins = scoreDataSO.heavenCoins;
         hellCoins = scoreDataSO.hellCoins;
-        progressBar = scoreDataSO.progressBar;
     }
     public void SaveLocation(Vector2 checkPosition)
     {
@@ -54,6 +53,5 @@ public class CheckpointData : ScoreDataSO
     {
         scoreDataSO.heavenCoins = heavenCoins;
         scoreDataSO.hellCoins = hellCoins;
-        scoreDataSO.progressBar = progressBar;
     }
 }

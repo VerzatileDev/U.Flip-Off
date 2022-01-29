@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.right * speed;
+        rb.velocity = transform.right * speed * GameObject.FindWithTag("Player").transform.localScale.x/5;
     }
 
     void OnTriggerEnter2D(Collider2D hitInformation)
@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
             Destroy(hitInformation.gameObject);
             Destroy(gameObject);
         }
-        else
+        else if (!hitInformation.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

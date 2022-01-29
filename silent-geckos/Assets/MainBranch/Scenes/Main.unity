@@ -202,36 +202,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &251760277 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5088860917604546470, guid: ce9fe4546326f0147bad414dd1c4cb25,
-    type: 3}
-  m_PrefabInstance: {fileID: 1556833012}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &251760278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251760277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02ed7fede6409c742b43b7aa2355f43d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 10
-  jumpForce: 10
-  ceilingCheck: {fileID: 0}
-  groundCheck: {fileID: 0}
-  jumpableObjects:
-    serializedVersion: 2
-    m_Bits: 0
-  maxJumpCount: 0
-  jumpsAvailable: 0
-  checkRadius: 0
-  isGrounded: 0
-  isJumping: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,8 +755,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 251760284, guid: ce9fe4546326f0147bad414dd1c4cb25, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce9fe4546326f0147bad414dd1c4cb25, type: 3}
 --- !u!1001 &1827445889
 PrefabInstance:
@@ -999,7 +968,7 @@ GameObject:
   - component: {fileID: 2016197687}
   - component: {fileID: 2016197686}
   - component: {fileID: 2016197688}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

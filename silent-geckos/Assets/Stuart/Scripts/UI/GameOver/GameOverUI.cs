@@ -25,13 +25,9 @@ public class GameOverUI : MonoBehaviour
             return;
         }
 
-        if (cumScoreData.lastLevel == null)
-        {
-            SetLose();
-            return;
-        }
-
-        SetWin();
+        if (cumScoreData.isWin) SetWin();
+        else SetLose();
+        
 
     }
 
@@ -52,5 +48,6 @@ public class GameOverUI : MonoBehaviour
         hellProgress.text = "0";
         heavenProgress.text = "0";
         winLose.text = "You lose";
+        cumScoreData.lastLevel.Clear();
     }
 }

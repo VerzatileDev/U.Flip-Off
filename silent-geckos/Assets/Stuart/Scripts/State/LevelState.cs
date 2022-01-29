@@ -8,6 +8,15 @@ public class LevelState : ScriptableObject
     public event Action OnLevelStart;
     public event Action OnLevelEnd;
 
+    private void OnEnable()
+    {
+        isGameStarted = false;
+    }
+    private void OnDisable()
+    {
+        isGameStarted = false;
+    }
+
     public bool IsGameStarted()
     {
         return isGameStarted;

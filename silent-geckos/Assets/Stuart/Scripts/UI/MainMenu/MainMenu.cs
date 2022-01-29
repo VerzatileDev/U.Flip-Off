@@ -36,7 +36,7 @@ public class MainMenu : MonoBehaviour
     public void OnStartGame()
     {
 	    Debug.Log("Start Game");
-	    SceneManager.LoadSceneAsync(1);
+	    SceneManager.LoadSceneAsync(2);
 	    mainMenuController.HideMainMenu();
     }
 }

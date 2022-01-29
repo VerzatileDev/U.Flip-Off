@@ -11,6 +11,7 @@ public class MainMenuController : MonoBehaviour
    [SerializeField]private CanvasGroup SettingsCG;
    [SerializeField]private CanvasGroup TutorialCG;
    private static readonly float AnimationTime = .75f;
+   [SerializeField] private LevelState levelState;
    #endregion
    
    #region ShowAndHideFunctions
@@ -28,6 +29,7 @@ public class MainMenuController : MonoBehaviour
     #endregion
     private void Awake()
     {
+      
         //set initial states
         InitLoad(true, MainMenuCG);
         InitLoad(false, TutorialCG);

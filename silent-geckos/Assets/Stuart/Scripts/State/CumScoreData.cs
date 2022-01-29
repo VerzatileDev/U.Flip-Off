@@ -6,6 +6,7 @@ using UnityEngine;
 public class CumScoreData : ScoreDataSO
 {
     public ScoreDataSO lastLevel;
+    public bool isWin;
     public void UpdateScore()
     {
         if (lastLevel == null)

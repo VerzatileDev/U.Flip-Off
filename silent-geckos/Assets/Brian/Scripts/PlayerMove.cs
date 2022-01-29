@@ -22,6 +22,8 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] private int jumpCount;
     [SerializeField] private int maxJumpCount;
+    private bool mybool;
+    private float value;
 
     // [SerializeField]  - Serialize Field, gives the opperatunity to Load and Save your values given..( as well as see them In the Inspector)
     // [Tooltip("text")] - Hovering over the Element in the Inspector Shows What the value is Used for Or its Information nessecary
@@ -59,9 +61,12 @@ public class PlayerMove : MonoBehaviour
     private void Move()
     {
         PlayerBody.velocity = new Vector2(moveDirection * moveSpeed, PlayerBody.velocity.y);
+        if (mybool) value = -jumpForce;
+        else value = jumpForce;
+
         if (isJumping)
         {
-            PlayerBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+            PlayerBody.AddForce(new Vector2(0f, value), ForceMode2D.Impulse);
             jumpCount--;
         }
         isJumping = false;
@@ -69,6 +74,7 @@ public class PlayerMove : MonoBehaviour
 
     private void Processinputs()
     {
+        mybool = FlipScript.GravityIsFlipped;
         moveDirection = Input.GetAxis("Horizontal"); // Scale of -1 to 1
         if (Input.GetButtonDown("Jump") && jumpCount > 0)
         {

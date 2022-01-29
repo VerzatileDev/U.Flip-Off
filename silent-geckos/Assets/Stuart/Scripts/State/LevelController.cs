@@ -6,9 +6,11 @@ using UnityEngine;
 public class LevelController : MonoBehaviour
 {
 	[SerializeField] private LevelState levelState;
-	
+    [SerializeField] private ScoreDataSO levelDataSO;
+    [SerializeField] private ScoreDataSO cumulativeDataSO;
 
-	private void Start()
+
+    private void Start()
 	{
 		LevelStart();
 	}
@@ -18,9 +20,20 @@ public class LevelController : MonoBehaviour
 		levelState.SetIsGameStarted(true);
 	}
 
-	public void LevelEnd()
+	public void LevelEnd(bool isWin)
 	{
 		levelState.SetIsGameStarted(false);
+        if (isWin)
+        {
+            Debug.Log("You win");
+            cumulativeDataSO.UpdateScore(levelDataSO);
+            levelDataSO.Clear();
+        }
+        else
+        {
+            Debug.Log("You Lose");
+            levelDataSO.Clear();
+        }
 
-	}
+    }
 }

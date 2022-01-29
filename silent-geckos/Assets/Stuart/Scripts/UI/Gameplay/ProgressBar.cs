@@ -15,11 +15,13 @@ public class ProgressBar : MonoBehaviour
 	[SerializeField] private float incrementPerSecond;
 	[SerializeField] private FlipScript flipScript;
 	private void Awake() => image = GetComponent<Image>();
+    [SerializeField] private ScoreDataSO scoreDataSo;
 
 
 	private void OnEnable()
 	{
-		//flipScript.OnPhaseChange += UpdateDirection;
+        if (flipScript == null) Debug.LogWarning("No flip script on progress bar");
+        else flipScript.OnPhaseChange += UpdateDirection;
 		levelState.OnLevelStart += StartLevel;
 		levelState.OnLevelEnd += StopLevel;
 	}
@@ -39,7 +41,9 @@ public class ProgressBar : MonoBehaviour
 	{
 		if (isHeaven) image.fillAmount += amount;
 		else image.fillAmount -= amount;
-	}
+        scoreDataSo.progressBar = image.fillAmount;
+
+    }
 
 	private void StartLevel()
 	{

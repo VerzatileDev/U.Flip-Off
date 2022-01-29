@@ -6,6 +6,6 @@ public class CameraFollow : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position = new Vector2(Target.position.x, Target.position.y);
+        transform.position = new Vector3(Target.position.x, 0 ,-10);
     }
 }

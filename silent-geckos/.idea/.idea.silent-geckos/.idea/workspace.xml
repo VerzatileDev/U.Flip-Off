@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="43f101a7-6208-46b9-89d4-9aeaecc7943c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Prefabs/UI/Slider.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Prefabs/UI/Slider.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Respawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Respawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/Gameplay/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/Gameplay/ProgressBar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,9 +16,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/Settings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/LevelSelect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/Tutorial.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/Settings.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,10 +50,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="20588">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="20588" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />

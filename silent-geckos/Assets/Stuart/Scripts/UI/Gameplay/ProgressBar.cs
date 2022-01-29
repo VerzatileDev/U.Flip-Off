@@ -16,23 +16,48 @@ public class ProgressBar : MonoBehaviour
 	[SerializeField] float refreshRateSeconds;
 	[SerializeField] private float incrementPerSecond;
 	[SerializeField] private FlipScript flipScript;
-	private void Awake() => image = GetComponent<Image>();
+	const int range=300;
+
+	private void Awake()
+	{
+		image = GetComponent<Image>();
+		respawn = FindObjectOfType<Respawn>();
+		if(respawn==null) Debug.LogWarning("respawn not found");
+
+	} 
     [SerializeField] private ScoreDataSO scoreDataSo;
     [SerializeField] private Image sliderImage;
-
+    private Respawn respawn;
+    
 	private void OnEnable()
 	{
         if (flipScript == null) Debug.LogWarning("No flip script on progress bar");
         else flipScript.OnPhaseChange += UpdateDirection;
 		levelState.OnLevelStart += StartLevel;
 		levelState.OnLevelEnd += StopLevel;
+		if (respawn != null) respawn.OnRespawn += Respawn;
 	}
+
+	private void Respawn()
+	{
+		SetSliderPosition();
+	}
+
+	private void SetSliderPosition()
+	{
+		RectTransform rectTransform = sliderImage.GetComponent<RectTransform>();
+		rectTransform.position = new Vector3(Map(scoreDataSo.progressBar, -1, 1, range * -1, range),
+			rectTransform.position.y, rectTransform.position.z);
+	}
+
 
 	private void OnDisable()
 	{
 		//flipScript.OnPhaseChange-= UpdateDirection;
 		levelState.OnLevelStart -= StartLevel;
 		levelState.OnLevelEnd -= StopLevel;
+		if (respawn != null) respawn.OnRespawn -= Respawn;
+
 	}
 
 
@@ -66,20 +91,15 @@ public class ProgressBar : MonoBehaviour
 	
 	private void UpdateSlider(float amount)
 	{
-		const int range=300;
 		RectTransform rectTransform = sliderImage.GetComponent<RectTransform>();
 		Vector3 currentPos = rectTransform.localPosition;
 		if (isHeaven)
 		{
 			if (currentPos.x +amount< range) rectTransform.localPosition = new Vector3(currentPos.x+=amount,currentPos.y,currentPos.z);
-			
 		}
 		else
 		{
 			if (currentPos.x -amount> range*-1) rectTransform.localPosition = new Vector3(currentPos.x-=amount,currentPos.y,currentPos.z);
-
-	
-			
 		}
 		scoreDataSo.progressBar = Map((int)rectTransform.localPosition.x,range*-1, range, 0,1);
 

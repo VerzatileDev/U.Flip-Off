@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -12,6 +13,8 @@ public class Respawn : MonoBehaviour
     public TextMeshProUGUI evilCounter;
     private int goodScore = 0;
     private int evilScore = 0;
+
+    public event Action OnRespawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class Respawn : MonoBehaviour
             goodCounter.text = goodScore.ToString();
             evilScore += scoreDataSo.hellCoins;
             evilCounter.text = evilScore.ToString();
+            OnRespawn?.Invoke();
         }
         else if (checkPointdata.checkpoint2 == true)
         {
@@ -35,6 +39,8 @@ public class Respawn : MonoBehaviour
             goodCounter.text = goodScore.ToString();
             evilScore += scoreDataSo.hellCoins;
             evilCounter.text = evilScore.ToString();
+            OnRespawn?.Invoke();
+
         }
 
         else if (checkPointdata.checkpoint1 == true)
@@ -46,6 +52,8 @@ public class Respawn : MonoBehaviour
             goodCounter.text = goodScore.ToString();
             evilScore += scoreDataSo.hellCoins;
             evilCounter.text = evilScore.ToString();
+            OnRespawn?.Invoke();
+
         }
     }
 }

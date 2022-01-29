@@ -9,6 +9,7 @@ public class FlipScript : MonoBehaviour
     public static bool GravityIsFlipped;
     public event Action<bool> OnPhaseChange;
     private bool isFlipOnCooldown = false;
+    private bool isFlipEnabled;
 
     void Start()
     {
@@ -18,7 +19,8 @@ public class FlipScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("j") && !isFlipOnCooldown)
+        isFlipEnabled = Dash.isMovementEnabled;
+        if (Input.GetKeyDown("j") && !isFlipOnCooldown && isFlipEnabled)
         {
             Flip();
         }

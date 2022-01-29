@@ -22,6 +22,7 @@ public class PlayerMoveMain : MonoBehaviour
     [SerializeField] private float checkRadius;
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool isJumping = false;
+    [SerializeField] private bool isMovementEnabled;
 
     //[Header("Player Direction")]
     private bool facingRight = true;
@@ -48,6 +49,7 @@ public class PlayerMoveMain : MonoBehaviour
 
     private void Processinputs()
     {
+        isMovementEnabled = Dash.isMovementEnabled;
         gravityState = FlipScript.GravityIsFlipped;
         moveDirection = Input.GetAxis("Horizontal"); // Scale of -1 to 1
         if (Input.GetButtonDown("Jump") && (jumpsAvailable > 0 || isGrounded))
@@ -68,15 +70,17 @@ public class PlayerMoveMain : MonoBehaviour
 
     private void Move()
     {
-        PlayerBody.velocity = new Vector2(moveDirection * movementSpeed, PlayerBody.velocity.y);
-        if (isJumping)
+        if (isMovementEnabled)
         {
-            if (gravityState) value = -jumpForce; else value = jumpForce;
-            PlayerBody.AddForce(new Vector2(0f, value), ForceMode2D.Impulse);
-            jumpsAvailable--;
-            isJumping = false;
+            PlayerBody.velocity = new Vector2(moveDirection * movementSpeed, PlayerBody.velocity.y);
+            if (isJumping)
+            {
+                if (gravityState) value = -jumpForce; else value = jumpForce;
+                PlayerBody.AddForce(new Vector2(0f, value), ForceMode2D.Impulse);
+                jumpsAvailable--;
+                isJumping = false;
+            }
         }
-
     }
 
 

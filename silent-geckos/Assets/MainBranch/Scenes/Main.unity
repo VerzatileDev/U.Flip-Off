@@ -732,7 +732,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 162.2
+  m_fontSize: 161.9
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1246,7 +1246,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 161.3
+  m_fontSize: 161
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1403,6 +1403,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2046600741, guid: ce9fe4546326f0147bad414dd1c4cb25, type: 3}
+      propertyPath: m_Size.x
+      value: 0.20045762
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046600741, guid: ce9fe4546326f0147bad414dd1c4cb25, type: 3}
+      propertyPath: m_Size.y
+      value: 0.19472584
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046600741, guid: ce9fe4546326f0147bad414dd1c4cb25, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.00052732974
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046600741, guid: ce9fe4546326f0147bad414dd1c4cb25, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0024380535
+      objectReference: {fileID: 0}
     - target: {fileID: 5088860917604546469, guid: ce9fe4546326f0147bad414dd1c4cb25,
         type: 3}
       propertyPath: m_RootOrder

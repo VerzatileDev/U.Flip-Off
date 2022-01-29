@@ -7,7 +7,7 @@ public class Dash : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private bool isDashOnCooldown = false;
-    [SerializeField] private bool isDashUnlocked;
+    [SerializeField] private Unlock dashUnlock;
     [SerializeField] static public bool isMovementEnabled = true;
 
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("l") && !isDashOnCooldown && isDashUnlocked)
+        if (Input.GetKeyDown("l") && !isDashOnCooldown && dashUnlock.isUnlocked)
         {
             StartCoroutine(DashCR());
         }

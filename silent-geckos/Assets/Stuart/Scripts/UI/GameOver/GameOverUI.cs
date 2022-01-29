@@ -48,6 +48,6 @@ public class GameOverUI : MonoBehaviour
         hellProgress.text = "0";
         heavenProgress.text = "0";
         winLose.text = "You lose";
-        cumScoreData.lastLevel.Clear();
+        if(cumScoreData.lastLevel!=null) cumScoreData.lastLevel.Clear();
     }
 }

@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d52153e570bbf444b8ffa8fdd5996808, type: 3}
-  m_Name: CumusScoreData
+  m_Script: {fileID: 11500000, guid: 1b8cb27a4fc696c478ec7d979cb69d5e, type: 3}
+  m_Name: DoubleJump
   m_EditorClassIdentifier: 
-  heavenCoins: 1
-  hellCoins: 0
-  progressBar: 6.300001
-  lastLevel: {fileID: 11400000, guid: 1a37c207d31ce59458dc801953128775, type: 2}
-  isWin: 1
+  unlockName: DoubleJump
+  heavenOrHell: 2
+  cost: 120
+  isUnlocked: 0

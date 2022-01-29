@@ -1946,6 +1946,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUIController: {fileID: 294474303}
+  container: {fileID: 11400000, guid: 54da2f3a992a0b3498c47819cc4723cd, type: 2}
+  upgradeButton: {fileID: 8542283322120328991, guid: a8bc8958fd162284fbabdbf1f92d302d,
+    type: 3}
+  uiContainer: {fileID: 2076678673}
+  buttons: []
+  data: {fileID: 11400000, guid: b30aa8203926c624885bde458b4549a5, type: 2}
 --- !u!224 &1386507210
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3415,22 +3421,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2076678673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+    m_Left: 15
+    m_Right: 15
+    m_Top: 15
+    m_Bottom: 15
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 175, y: 125}
+  m_Spacing: {x: 20, y: 20}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &2139789064
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,15 +8,18 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
 
-    [Header("Define Collision to Check")]
+    [Header("Player Collision Checks")]
     [SerializeField] private Transform ceilingCheck; // -- State not used ! -- //
     [SerializeField] private Transform groundCheck;
+
+    [Header("Define Collision Layer to Check")]
     [SerializeField] private LayerMask jumpableObjects;
 
     [Header("Player Jump Information")]
     [SerializeField] private int maxJumpCount;
     [SerializeField] private int jumpsAvailable;
-    [SerializeField] private float checkRadius; // Check Radius From floor, in order the Define isJumping false/ true.
+    [Tooltip("Makes A circle with Radius : __ :  From   groundCheck  and check if Radius Inside or Touching jumpableObjects ")]
+    [SerializeField] private float checkRadius;
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool isJumping = false;
 
@@ -55,7 +58,6 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate() //Called multiples time per frame
     {
-        // Check Ground Position With A Circle Radius from GroundObjects
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, jumpableObjects);
         if (isGrounded)
         {

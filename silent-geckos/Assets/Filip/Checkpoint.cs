@@ -39,7 +39,6 @@ public class Checkpoint : MonoBehaviour
             checkPointdata.SaveLocation(this.transform.position);
             checkPointdata.MergeData(scoreDataSo);
             checkPointdata.SaveCheckpoint(checkpointnumber);
-            DontDestroyOnLoad(gameObject);
             Destroy(gameObject);
         }
     }

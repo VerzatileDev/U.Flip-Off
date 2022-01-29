@@ -39,4 +39,14 @@ public class CheckpointData : ScoreDataSO
             checkpoint3 = true;
         }
     }
+    public void Wipe()
+    {
+        heavenCoins = 0;
+        hellCoins = 0;
+        progressBar = 0;
+        position = Vector2.zero;
+        checkpoint1 = false;
+        checkpoint2 = false;
+        checkpoint3 = false;
+    }
 }

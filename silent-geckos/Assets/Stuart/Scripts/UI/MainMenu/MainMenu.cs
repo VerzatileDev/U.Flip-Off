@@ -43,6 +43,6 @@ public class MainMenu : MonoBehaviour
     }
     private void WipeCheckPoints()
     {
-	   // data.Wipe();
+	   data.Wipe();
     }
 }

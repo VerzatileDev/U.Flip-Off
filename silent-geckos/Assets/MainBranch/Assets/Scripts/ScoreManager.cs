@@ -10,10 +10,9 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public TextMeshProUGUI goodCounter;
     public TextMeshProUGUI evilCounter;
-    int goodScore;
-    int evilScore;
-
-    public event Action<bool, int> OnCoinsChange;
+  public  int goodScore;
+    public int evilScore;
+    [SerializeField] private ScoreDataSO scoreDataSo;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,13 +25,13 @@ public class ScoreManager : MonoBehaviour
     {
         goodScore += coinValue;
         goodCounter.text = goodScore.ToString();
-        OnCoinsChange?.Invoke(true,coinValue);
+        scoreDataSo.UpdateCoins(true, goodScore);
+
     }
     public void ChangeScoreEvil(int coinValue)
     {
         evilScore += coinValue;
         evilCounter.text = evilScore.ToString();
-        OnCoinsChange?.Invoke(false,coinValue);
-
+        scoreDataSo.UpdateCoins(false, evilScore);
     }
 }

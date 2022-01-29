@@ -11,7 +11,20 @@ public class LevelController : MonoBehaviour
     [SerializeField] private CumScoreData cumulativeDataSO;
     [SerializeField] private bool isWin;
 
+    private void OnEnable()
+    {
+	    //ondeath+=HandleLevelDeath;
+    }
 
+    private void OnDisable()
+    {
+	    //ondeath-=HandleLevelDeath;
+    }
+
+    void HandleLevelDeath()
+    {
+	    LevelEnd(false);
+    }
     private void Start()
     {
 		LevelStart();
@@ -35,9 +48,9 @@ public class LevelController : MonoBehaviour
         }
         else
         {
-	        cumulativeDataSO.isWin = false;
+	        levelDataSO.Clear();
 	        Debug.Log("You Lose");
-            SceneManager.LoadSceneAsync(1);
+          
         }
 
     }

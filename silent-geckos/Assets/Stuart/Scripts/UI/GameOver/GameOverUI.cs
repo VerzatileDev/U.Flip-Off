@@ -36,8 +36,8 @@ public class GameOverUI : MonoBehaviour
         winLose.text = "You win";
         hellCoins.text = cumScoreData.lastLevel.hellCoins.ToString();
         heavenCoins.text = cumScoreData.lastLevel.heavenCoins.ToString();
-        hellProgress.text = (100-((int)(cumScoreData.lastLevel.progressBar*100))).ToString();
-        heavenProgress.text = ((int)(cumScoreData.lastLevel.progressBar*100)).ToString();
+        hellProgress.text = (100-((int)(cumScoreData.lastLevel.progressBar*100))).ToString()+ "%";
+        heavenProgress.text = ((int)(cumScoreData.lastLevel.progressBar*100)).ToString()+ "%";
         cumScoreData.UpdateScore();
     }
 

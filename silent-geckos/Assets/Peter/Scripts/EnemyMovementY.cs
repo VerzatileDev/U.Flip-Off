@@ -19,7 +19,7 @@ public class EnemyMovementY : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.transform.localPosition.y < PatrolPoint1.transform.localPosition.y || this.transform.localPosition.y > PatrolPoint2.transform.localPosition.y && isSwap == false)
+        if ((this.transform.localPosition.y < PatrolPoint1.transform.localPosition.y || this.transform.localPosition.y > PatrolPoint2.transform.localPosition.y) && isSwap == false)
         {
             this.GetComponent<Rigidbody2D>().velocity *= -1;
             StartCoroutine(SwapDirection());

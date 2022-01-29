@@ -6,7 +6,7 @@ using System;
 public class FlipScript : MonoBehaviour
 {
     public GameObject player;
-    public bool isFlipped;
+    public static bool isFlipped;
     public event Action<bool> OnPhaseChange;
 
     // Start is called before the first frame update

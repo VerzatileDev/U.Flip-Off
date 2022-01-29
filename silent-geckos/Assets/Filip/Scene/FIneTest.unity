@@ -779,6 +779,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6956564777580551993, guid: 0d0a87ef69e478e4d9084b7f4b4758e2,
+        type: 3}
+      propertyPath: checkpointnumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6956564777580551994, guid: 0d0a87ef69e478e4d9084b7f4b4758e2,
         type: 3}
       propertyPath: m_RootOrder

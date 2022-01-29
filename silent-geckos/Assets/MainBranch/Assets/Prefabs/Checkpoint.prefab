@@ -108,9 +108,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6956564777580551997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c301443bf881246ad7c02b2fab03df, type: 3}
+  m_Script: {fileID: 11500000, guid: b3042cb1fef279647a33652aef53a87b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   checkPointdata: {fileID: 11400000, guid: 7f8a335ef31302b48b307fa5ce120449, type: 2}
   scoreDataSo: {fileID: 11400000, guid: 1a37c207d31ce59458dc801953128775, type: 2}
-  checkpointnumber: 0
+  checkpointnumber: 1

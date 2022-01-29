@@ -210,7 +210,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5088860917604546470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e91956620531c24e992f7b527e9be07, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b22ad2614c9fe04ba3d002dc438adef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 5088860917386799515}
@@ -325,4 +325,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   isDashOnCooldown: 0
-  isDashUnlocked: 0
+  dashUnlock: {fileID: 0}

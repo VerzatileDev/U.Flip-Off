@@ -5,14 +5,17 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
+   #region Variables
    [SerializeField] private CanvasGroup LevelSelectCG;
    [SerializeField]private CanvasGroup MainMenuCG;
    [SerializeField]private CanvasGroup SettingsCG;
    [SerializeField]private CanvasGroup TutorialCG;
+   private static readonly float AnimationTime = .75f;
+   #endregion
+   
+   #region ShowAndHideFunctions
 
-   private static readonly float AnimationTime = 0.5f;
-
-    public void ShowLevelSelect() => StartCoroutine(ShowCanvas(LevelSelectCG, 1.0f));
+   public void ShowLevelSelect() => StartCoroutine(ShowCanvas(LevelSelectCG, 1.0f));
     public void HideLevelSelect() => StartCoroutine(ShowCanvas(LevelSelectCG, 0.0f));
 
     public void HideMainMenu() => StartCoroutine(ShowCanvas(MainMenuCG, 0.0f));
@@ -22,15 +25,17 @@ public class MainMenuController : MonoBehaviour
     public void HideSettings() =>StartCoroutine(ShowCanvas(SettingsCG, 0.0f));
     public void ShowTutorial() =>StartCoroutine(ShowCanvas(TutorialCG, 1.0f));
     public void HideTutorial() =>StartCoroutine(ShowCanvas(TutorialCG, 0.0f));
+    #endregion
     private void Awake()
     {
+        //set initial states
         InitLoad(true, MainMenuCG);
         InitLoad(false, TutorialCG);
         InitLoad(false, SettingsCG);
         InitLoad(false, LevelSelectCG);
 
     }
-
+    //sets state
     void InitLoad(bool state, CanvasGroup group)
     {
         group.interactable = state;
@@ -38,7 +43,7 @@ public class MainMenuController : MonoBehaviour
         group.alpha = state ? 1 : 0;
         
     }
-
+    //fades ui change
     private static IEnumerator ShowCanvas(CanvasGroup group, float target)
     {
         if (group == null) yield break;

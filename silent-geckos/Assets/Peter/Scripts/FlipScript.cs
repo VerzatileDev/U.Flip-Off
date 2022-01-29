@@ -27,7 +27,7 @@ public class FlipScript : MonoBehaviour
     void Flip()
     {
         GravityIsFlipped = !GravityIsFlipped;
-        OnPhaseChange?.Invoke(!GravityisFlipped);
+        OnPhaseChange?.Invoke(!GravityIsFlipped);
         Vector3 position = new Vector3(0, player.transform.position.y * -2,0);
         player.transform.Translate(position);
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(player.GetComponent<Rigidbody2D>().velocity.x,player.GetComponent<Rigidbody2D>().velocity.y*-1,0);

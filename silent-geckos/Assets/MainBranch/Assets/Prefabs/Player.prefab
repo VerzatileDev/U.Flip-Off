@@ -268,7 +268,7 @@ MonoBehaviour:
     m_Bits: 256
   maxJumpCount: 0
   jumpsAvailable: 0
-  checkRadius: 0.5
+  checkRadius: 2
   isGrounded: 0
   isJumping: 0
   isMovementEnabled: 0

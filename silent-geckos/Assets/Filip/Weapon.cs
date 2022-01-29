@@ -6,6 +6,10 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bullet;
+    float cooldownDuration = 5f;
+    bool cooldown = false;
+
+
     // Update is called once per frame
     void Update()
     {
@@ -14,8 +18,8 @@ public class Weapon : MonoBehaviour
             Shoot();
         }
     }
-
     void Shoot()
+
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }

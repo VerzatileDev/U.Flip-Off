@@ -1,21 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using UnityEngine;
+using System; // For Action
 
 public class FlipScript : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField] private GameObject player; // Hidden Globally, Shown In Inspector. ( Since not nessecary to Call it Anywhere Else as Generally Attached to Player Object )
     public static bool GravityIsFlipped;
     public event Action<bool> OnPhaseChange;
 
-    // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("j"))

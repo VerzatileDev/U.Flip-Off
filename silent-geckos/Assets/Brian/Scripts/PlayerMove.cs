@@ -4,97 +4,94 @@ public class PlayerMove : MonoBehaviour
 {
     private Rigidbody2D PlayerBody;
 
-    //Forces
-    [SerializeField] private float moveSpeed;
+    [Header("Set Player Forces")]
+    [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
 
-    //Direction
+    [Header("Define Collision to Check")]
+    [SerializeField] private Transform ceilingCheck; // -- State not used ! -- //
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask jumpableObjects;
+
+    [Header("Player Jump Information")]
+    [SerializeField] private int maxJumpCount;
+    [SerializeField] private int jumpsAvailable;
+    [SerializeField] private float checkRadius; // Check Radius From floor, in order the Define isJumping false/ true.
+    [SerializeField] private bool isGrounded;
+    [SerializeField] private bool isJumping = false;
+
+    //[Header("Player Direction")]
     private bool facingRight = true;
     private float moveDirection;
-
-    //Collision Checking
-    private bool isJumping = false;
-    private bool isGrounded;
-    public float checkRadius;
-    [SerializeField] private Transform ceilingCheck;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundObjects;
-
-    [SerializeField] private int jumpCount;
-    [SerializeField] private int maxJumpCount;
-    private bool mybool;
+    private bool gravityState; // Gets GravityisFlipped State
     private float value;
 
-    // [SerializeField]  - Serialize Field, gives the opperatunity to Load and Save your values given..( as well as see them In the Inspector)
-    // [Tooltip("text")] - Hovering over the Element in the Inspector Shows What the value is Used for Or its Information nessecary
-    // Debug.Log("text"); - Tell us Information within the Console
-
-    private void Start()
-    {
-        jumpCount = maxJumpCount;
-    }
+    // [SerializeField]  - See Private Values Within The Inspector Editor
+    // [Header("Text")]  - Organizes Inspector into a list seperating other values where nessecary
+    // [Tooltip("text")] - Hover Over an Element Such as Variable, States Its use as A TextBox Tooltip on top of the Value.
+    // Debug.Log("text"); - Displays Information Within our Console
 
     private void Awake()
     {
-        // "At Start of the Game "Gets a component and Attaches it to rigidbody2d
         PlayerBody = GetComponent<Rigidbody2D>();
+        jumpsAvailable = maxJumpCount;
     }
 
-
-    void Update()
+    void Update() // Once per frame
     {
         Processinputs();
         Animate();
     }
-    //Called multiples time per frame
-    private void FixedUpdate()
+
+    private void Processinputs()
+    {
+        gravityState = FlipScript.GravityIsFlipped;
+        moveDirection = Input.GetAxis("Horizontal"); // Scale of -1 to 1
+        if (Input.GetButtonDown("Jump") && jumpsAvailable > 0)
+        {
+            isJumping = true;
+        }
+    }
+
+    private void FixedUpdate() //Called multiples time per frame
     {
         // Check Ground Position With A Circle Radius from GroundObjects
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundObjects);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, jumpableObjects);
         if (isGrounded)
         {
-            jumpCount = maxJumpCount; //While user on the Floor, possible Jumps is set back to Maximum amount.
+            jumpsAvailable = maxJumpCount;
         }
         Move();
     }
 
     private void Move()
     {
-        PlayerBody.velocity = new Vector2(moveDirection * moveSpeed, PlayerBody.velocity.y);
-        if (mybool) value = -jumpForce;
-        else value = jumpForce;
-
+        PlayerBody.velocity = new Vector2(moveDirection * movementSpeed, PlayerBody.velocity.y);
         if (isJumping)
         {
+            if (gravityState) value = -jumpForce; else value = jumpForce;
             PlayerBody.AddForce(new Vector2(0f, value), ForceMode2D.Impulse);
-            jumpCount--;
+            jumpsAvailable--;
+            isJumping = false;
         }
-        isJumping = false;
+        
     }
 
-    private void Processinputs()
-    {
-        mybool = FlipScript.GravityIsFlipped;
-        moveDirection = Input.GetAxis("Horizontal"); // Scale of -1 to 1
-        if (Input.GetButtonDown("Jump") && jumpCount > 0)
-        {
-            isJumping = true;
-        }
-    }
+    
 
     private void Animate()
     {
         if (moveDirection > 0 && !facingRight)
         {
-            FlipCharacter();
+            FlipPlayerDirection();
         }
         else if (moveDirection < 0 && facingRight)
         {
-            FlipCharacter();
+            FlipPlayerDirection();
         }
     }
 
-    private void FlipCharacter()
+    private void FlipPlayerDirection()
     {
         facingRight = !facingRight; // Inverse bool
         transform.Rotate(0f, 180f, 0f);

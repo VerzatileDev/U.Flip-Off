@@ -487,16 +487,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7038cf86dbba5347b16d3766057dc80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  movementSpeed: 5
   jumpForce: 5
-  checkRadius: 0.01
   ceilingCheck: {fileID: 178653482}
   groundCheck: {fileID: 1158790732}
-  groundObjects:
+  jumpableObjects:
     serializedVersion: 2
     m_Bits: 256
-  jumpCount: 0
   maxJumpCount: 1
+  jumpsAvailable: 0
+  checkRadius: 0.01
+  isGrounded: 0
+  isJumping: 0
 --- !u!114 &1055822980
 MonoBehaviour:
   m_ObjectHideFlags: 0

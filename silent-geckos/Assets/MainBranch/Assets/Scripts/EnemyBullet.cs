@@ -33,7 +33,7 @@ public class EnemyBullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (!hitInformation.gameObject.CompareTag("EnemyRanged"))
+        else if (!(hitInformation.gameObject.CompareTag("EnemyRanged") || hitInformation.gameObject.CompareTag("Enemy")))
         {
             Destroy(gameObject);
         }

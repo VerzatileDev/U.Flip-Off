@@ -216,3 +216,5 @@ MonoBehaviour:
   isHeaven: 1
   refreshRateSeconds: 1
   incrementPerSecond: 1
+  flipScript: {fileID: 0}
+  scoreDataSo: {fileID: 11400000, guid: 1a37c207d31ce59458dc801953128775, type: 2}

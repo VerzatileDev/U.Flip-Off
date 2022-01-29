@@ -1,7 +1,7 @@
 ﻿
 using System;
 using UnityEngine;
-[CreateAssetMenu(fileName = "LevelStateData", menuName = "LevelStateData")]
+[CreateAssetMenu(fileName = "LevelStateData", menuName = "Stuart/LevelStateData")]
 public class LevelState : ScriptableObject
 {
     private bool isGameStarted = false;

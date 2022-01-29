@@ -2,12 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
 	[SerializeField] private LevelState levelState;
     [SerializeField] private ScoreDataSO levelDataSO;
-    [SerializeField] private ScoreDataSO cumulativeDataSO;
+    [SerializeField] private CumScoreData cumulativeDataSO;
 
 
     private void Start()
@@ -18,6 +19,7 @@ public class LevelController : MonoBehaviour
 	private void LevelStart()
 	{
 		levelState.SetIsGameStarted(true);
+		cumulativeDataSO.lastLevel = levelDataSO;
 	}
 
 	public void LevelEnd(bool isWin)
@@ -26,13 +28,15 @@ public class LevelController : MonoBehaviour
         if (isWin)
         {
             Debug.Log("You win");
-            cumulativeDataSO.UpdateScore(levelDataSO);
-            levelDataSO.Clear();
+            cumulativeDataSO.lastLevel = levelDataSO;
+            SceneManager.LoadSceneAsync(0);
         }
         else
         {
-            Debug.Log("You Lose");
-            levelDataSO.Clear();
+	        levelDataSO.Clear();
+	        cumulativeDataSO.lastLevel = levelDataSO;
+	        Debug.Log("You Lose");
+            SceneManager.LoadSceneAsync(0);
         }
 
     }

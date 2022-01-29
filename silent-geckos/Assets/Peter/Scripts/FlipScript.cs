@@ -6,7 +6,7 @@ using System;
 public class FlipScript : MonoBehaviour
 {
     public GameObject player;
-    public static bool isFlipped;
+    public static bool GravityIsFlipped;
     public event Action<bool> OnPhaseChange;
 
     // Start is called before the first frame update
@@ -27,7 +27,7 @@ public class FlipScript : MonoBehaviour
     void Flip()
     {
         isFlipped = !isFlipped;
-        OnPhaseChange?.Invoke(!isFlipped);
+        OnPhaseChange?.Invoke(!GravityisFlipped);
         Vector3 position = new Vector3(0, player.transform.position.y * -2,0);
         player.transform.Translate(position);
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(player.GetComponent<Rigidbody2D>().velocity.x,player.GetComponent<Rigidbody2D>().velocity.y*-1,0);

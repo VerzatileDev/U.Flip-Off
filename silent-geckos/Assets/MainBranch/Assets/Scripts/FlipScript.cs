@@ -28,11 +28,10 @@ public class FlipScript : MonoBehaviour
         }
     }
 
-    void Flip()
+    public void Flip()
     {
         StartCoroutine(FlipCooldown());
         GravityIsFlipped = !GravityIsFlipped;
-        checkPointdata.Flipped();
         OnPhaseChange?.Invoke(!GravityIsFlipped);
         Vector3 position = new Vector3(0, player.transform.position.y * -2, 0);
         player.transform.Translate(position);

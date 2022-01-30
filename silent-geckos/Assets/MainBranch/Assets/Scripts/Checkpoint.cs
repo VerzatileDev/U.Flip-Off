@@ -6,6 +6,7 @@ public class Checkpoint : MonoBehaviour
 {
     [SerializeField] private CheckpointData checkPointdata;
     [SerializeField] private ScoreDataSO scoreDataSo;
+    public bool inHell = false;
     public int checkpointnumber;
     public void Awake()
     {
@@ -39,6 +40,7 @@ public class Checkpoint : MonoBehaviour
             checkPointdata.SaveLocation(this.transform.position);
             checkPointdata.MergeData(scoreDataSo);
             checkPointdata.SaveCheckpoint(checkpointnumber);
+            checkPointdata.inHell = inHell;
             Destroy(gameObject);
         }
     }

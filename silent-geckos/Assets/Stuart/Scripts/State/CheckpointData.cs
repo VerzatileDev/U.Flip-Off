@@ -56,10 +56,4 @@ public class CheckpointData : ScoreDataSO
         scoreDataSO.hellCoins = hellCoins;
         scoreDataSO.progressBar = progressBar;
     }
-
-    public void Flipped()
-    {
-        Debug.Log("Flipped");
-        inHell = !inHell;
-    }
 }

@@ -29,6 +29,11 @@ public class Respawn : MonoBehaviour
             evilScore += scoreDataSo.hellCoins;
             evilCounter.text = evilScore.ToString();
             OnRespawn?.Invoke();
+            if (checkPointdata.inHell == true)
+            {
+                player.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                player.transform.localScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y * -1, 1);
+            }
         }
         else if (checkPointdata.checkpoint2 == true)
         {
@@ -40,7 +45,11 @@ public class Respawn : MonoBehaviour
             evilScore += scoreDataSo.hellCoins;
             evilCounter.text = evilScore.ToString();
             OnRespawn?.Invoke();
-
+            if (checkPointdata.inHell == true)
+            {
+                player.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                player.transform.localScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y * -1, 1);
+            }
         }
 
         else if (checkPointdata.checkpoint1 == true)
@@ -53,7 +62,11 @@ public class Respawn : MonoBehaviour
             evilScore += scoreDataSo.hellCoins;
             evilCounter.text = evilScore.ToString();
             OnRespawn?.Invoke();
-
+            if (checkPointdata.inHell == true)
+            {
+                player.GetComponent<Rigidbody2D>().gravityScale *= -1;
+                player.transform.localScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y * -1, 1);
+            }
         }
     }
 }

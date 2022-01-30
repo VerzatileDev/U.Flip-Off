@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b22ad2614c9fe04ba3d002dc438adef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2763792187882040380}
   firePoint: {fileID: 7479916458997209797}
   bullet: {fileID: 6528657511118381045, guid: 0a132b6e37066d94cb5d2d7445e5a097, type: 3}
 --- !u!50 &2400775296058179016
@@ -319,7 +320,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7479916458997209796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.105, y: 0, z: 0}
+  m_LocalPosition: {x: 0.13, y: 0.064, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7479916458814391547}

@@ -2505,7 +2505,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 128.25
+  m_fontSize: 67.9
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7483,7 +7483,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 129.15
+  m_fontSize: 68.8
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7658,6 +7658,12 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 894296115}
+    - target: {fileID: 7479916458814391546, guid: 776f45e895932bc409f66130c4851fad,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8809470994601461542, guid: c44e868b95d498849b4f723a704e70cf,
+        type: 3}
     - target: {fileID: 7479916458814391547, guid: 776f45e895932bc409f66130c4851fad,
         type: 3}
       propertyPath: m_RootOrder
@@ -7716,12 +7722,12 @@ PrefabInstance:
     - target: {fileID: 7479916458997209797, guid: 776f45e895932bc409f66130c4851fad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.105
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 7479916458997209797, guid: 776f45e895932bc409f66130c4851fad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.04
+      value: 0.064
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 776f45e895932bc409f66130c4851fad, type: 3}

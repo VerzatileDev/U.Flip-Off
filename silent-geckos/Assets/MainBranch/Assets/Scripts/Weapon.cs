@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private Animator animator;
 
     public Transform firePoint;
@@ -11,6 +12,10 @@ public class Weapon : MonoBehaviour
     float cooldownDuration = 0.5f;
     bool cooldown = false;
 
+    void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,9 +32,12 @@ public class Weapon : MonoBehaviour
     }
     IEnumerator Shoot()
     {
+        player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         animator.SetTrigger("ShootTrigger");
         yield return new WaitForSeconds(.15f);
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        yield return new WaitForSeconds(.1f);
+        player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
 
     IEnumerator Cooldown()

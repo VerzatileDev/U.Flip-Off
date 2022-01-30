@@ -7,6 +7,7 @@ public class PlayerMoveMain : MonoBehaviour
     [SerializeField] private Animator animator;
 
     [Header("Set Player Forces")]
+
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpForce;
 
@@ -25,6 +26,8 @@ public class PlayerMoveMain : MonoBehaviour
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool isJumping = false;
     [SerializeField] private bool isMovementEnabled;
+    [Header("Unlocks")] [SerializeField] private Unlock movementSpeed1;
+  [SerializeField] private Unlock movementSpeed2;
 
     //[Header("Player Direction")]
     private bool facingRight = true;
@@ -45,6 +48,7 @@ public class PlayerMoveMain : MonoBehaviour
 
     void Update() // Once per frame
     {
+        MovementSpeedUnlock();
         Processinputs();
         Animate();
         if (PlayerBody.velocity.x != 0)
@@ -55,6 +59,12 @@ public class PlayerMoveMain : MonoBehaviour
         {
             animator.SetBool("isRunning", false);
         }
+    }
+
+    private void MovementSpeedUnlock()
+    {
+        if (movementSpeed1.isUnlocked) movementSpeed = 7f;
+        if (movementSpeed2.isUnlocked) movementSpeed = 7.7f;
     }
 
     private void Processinputs()

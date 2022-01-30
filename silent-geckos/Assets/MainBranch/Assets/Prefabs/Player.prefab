@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b22ad2614c9fe04ba3d002dc438adef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   animator: {fileID: 2763792187882040380}
   firePoint: {fileID: 7479916458997209797}
   bullet: {fileID: 6528657511118381045, guid: 0a132b6e37066d94cb5d2d7445e5a097, type: 3}
@@ -212,17 +213,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2763792187882040380}
-  movementSpeed: 7
+  setMovementSpeed: 6.5
   jumpForce: 7
   jumpableObjects:
     serializedVersion: 2
     m_Bits: 256
-  maxJumpCount: 0
+  maxJumpCount: 1
   jumpsAvailable: 0
   checkRadius: 0.5
   isGrounded: 0
   isJumping: 0
   isMovementEnabled: 0
+  movementSpeed1: {fileID: 11400000, guid: 5fc84d0a012641a4f84648aa0ad9f00a, type: 2}
+  movementSpeed2: {fileID: 11400000, guid: 7b61cf534b2db6140b8614c1d50203ec, type: 2}
 --- !u!61 &2400775294226634107
 BoxCollider2D:
   m_ObjectHideFlags: 0

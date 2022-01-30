@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Peter/Scenes/PeterLevel.unity
     guid: b96e4277922342848a9c377f573b992e
+  - enabled: 1
+    path: Assets/MainBranch/Scenes/Main.unity
+    guid: 5055239edee35794d80da5f307f5fcd7
   m_configObjects: {}

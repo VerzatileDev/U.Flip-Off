@@ -32,12 +32,10 @@ public class Dash : MonoBehaviour
         player.GetComponent<Rigidbody2D>().gravityScale = 0;
         isMovementEnabled = false;
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(player.transform.localScale.x * 4, 0, 0);
-        player.GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(.2f);
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         player.GetComponent<Rigidbody2D>().gravityScale = temp;
         isMovementEnabled = true;
-        player.GetComponent<BoxCollider2D>().enabled = true;
         yield return new WaitForSeconds(.8f);
         isDashOnCooldown = false;
     }

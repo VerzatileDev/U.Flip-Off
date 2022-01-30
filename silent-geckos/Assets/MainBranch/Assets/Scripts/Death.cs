@@ -31,6 +31,7 @@ public class Death : MonoBehaviour
     {
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         player.GetComponent<Renderer>().enabled = false;
+        player.GetComponent<BoxCollider2D>().enabled = false;
         yield return new WaitForSeconds(1f);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);

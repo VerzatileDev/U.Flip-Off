@@ -10,12 +10,14 @@ public class GameOverController : MonoBehaviour
     public void OnBackButton()
     {
         Debug.LogWarning("back button pressed");
-
+        AudioController.instance.PlayButtonClick();
         SceneManager.LoadSceneAsync(0);
     }
 
     public void OnForwardButton()
     {
+        AudioController.instance.PlayButtonClick();
+
         StartCoroutine( MainMenuController.ShowCanvas(gameOverUIController.gameOverScreen, 0f));
         StartCoroutine(  MainMenuController.ShowCanvas(gameOverUIController.upgradeScreen, 1f));
 

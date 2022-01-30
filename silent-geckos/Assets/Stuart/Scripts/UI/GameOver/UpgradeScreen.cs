@@ -39,6 +39,8 @@ public class UpgradeScreen : MonoBehaviour
 
     public void OnBackButton()
     {
+        AudioController.instance.PlayButtonClick();
+
         StartCoroutine( MainMenuController.ShowCanvas(gameOverUIController.gameOverScreen, 1f));
         StartCoroutine(MainMenuController.ShowCanvas(gameOverUIController.upgradeScreen, 0f));
 
@@ -46,6 +48,8 @@ public class UpgradeScreen : MonoBehaviour
 
     public void OnForwardButton()
     {
+        AudioController.instance.PlayButtonClick();
+
         SceneManager.LoadSceneAsync(0);
     }
 
@@ -53,6 +57,8 @@ public class UpgradeScreen : MonoBehaviour
 
     public void Purchase(Unlock unlock)
     {
+        AudioController.instance.PlayButtonClick();
+
         if (unlock.isUnlocked == false)
         {
 

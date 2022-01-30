@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
-	[SerializeField] private AudioClip clip;
 
 	private MainMenuController mainMenuController;
 	private void Awake()=> mainMenuController = GetComponentInParent<MainMenuController>();
@@ -13,7 +12,7 @@ public class MainMenu : MonoBehaviour
 
 	public void OnLevelSelectButton()
 	{
-		AudioController.instance.PlaySFX(clip);
+		AudioController.instance.PlayButtonClick();
 
 		Console.WriteLine("Open Level Select");
 		mainMenuController.ShowLevelSelect();
@@ -21,7 +20,7 @@ public class MainMenu : MonoBehaviour
 	}
     public void OnSettingsButton()
     {
-	    AudioController.instance.PlaySFX(clip);
+	    AudioController.instance.PlayButtonClick();
 
 	    Debug.Log("Open Settings");
 	    mainMenuController.ShowSettings();
@@ -30,7 +29,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OnTutorialButton()
     {
-	    AudioController.instance.PlaySFX(clip);
+	    AudioController.instance.PlayButtonClick();
 
 	    Debug.Log("Open Tutorial");
 	    mainMenuController.ShowTutorial();
@@ -39,14 +38,14 @@ public class MainMenu : MonoBehaviour
     }
     public void OnQuitButton()
     {
-	    AudioController.instance.PlaySFX(clip);
+	    AudioController.instance.PlayButtonClick();
 
 	    Debug.Log("Application quit");
 	    Application.Quit();
     }
     public void OnStartGame()
     {
-	    AudioController.instance.PlaySFX(clip);
+	    AudioController.instance.PlayButtonClick();
 
 	    Debug.Log("Start Game");
 	    WipeCheckPoints();

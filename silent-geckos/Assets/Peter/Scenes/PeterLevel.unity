@@ -3376,12 +3376,6 @@ Transform:
   m_Father: {fileID: 1013999253}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &894296115 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2763792187882040380, guid: 776f45e895932bc409f66130c4851fad,
-    type: 3}
-  m_PrefabInstance: {fileID: 2400775295366564585}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &986658607 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2400775296058179014, guid: 776f45e895932bc409f66130c4851fad,
@@ -7648,11 +7642,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6365150353968386174, guid: 776f45e895932bc409f66130c4851fad,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 894296115}
     - target: {fileID: 7479916458814391544, guid: 776f45e895932bc409f66130c4851fad,
         type: 3}
       propertyPath: m_Name

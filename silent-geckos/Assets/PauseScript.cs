@@ -7,6 +7,8 @@ public class PauseScript : MonoBehaviour
 {
     private bool isPaused = false;
     [SerializeField] private CanvasGroup popup;
+    [SerializeField] private AudioClip clip;
+
     public void Quit()
     {
         Debug.Log("Quiting");
@@ -39,6 +41,8 @@ public class PauseScript : MonoBehaviour
 
     private void Pause()
     {
+        AudioController.instance.PlaySFX(clip);
+
         popup.interactable = true;
         popup.blocksRaycasts = true;
         popup.alpha = 1; 

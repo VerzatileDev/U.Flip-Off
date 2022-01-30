@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Settings : MonoBehaviour
 {
+	[SerializeField] private AudioClip clip;
+
 	private MainMenuController mainMenuController;
 
 	private void Awake()
@@ -14,6 +16,8 @@ public class Settings : MonoBehaviour
 
 	public void OnBackButton()
 	{
+		AudioController.instance.PlaySFX(clip);
+
 		if (mainMenuController != null)
 		{
 			mainMenuController.ShowMainMenu();

@@ -8,6 +8,7 @@ public class AudioController : MonoBehaviour
     public static AudioController instance;
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioClip buttonClickFX;
     private void Awake()
     {
         if (instance == null)
@@ -21,5 +22,11 @@ public class AudioController : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
+    }
+
+    public void PlayButtonClick()
+    {
+        sfxSource.PlayOneShot(buttonClickFX);
+
     }
 }

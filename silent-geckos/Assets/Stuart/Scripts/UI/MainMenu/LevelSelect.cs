@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelSelect : MonoBehaviour
-{
+{    [SerializeField] private AudioClip clip;
+
     private MainMenuController mainMenuController;
     [SerializeField] private CheckpointData data;
     private void Awake()
@@ -14,6 +15,8 @@ public class LevelSelect : MonoBehaviour
 
     public void OnBackButton()
     {
+	    AudioController.instance.PlaySFX(clip);
+
 	    if (mainMenuController != null)
 	    {
 		    mainMenuController.ShowMainMenu();
@@ -25,7 +28,8 @@ public class LevelSelect : MonoBehaviour
 
     public void OnLevelSelect(int level)
     {
-	    
+	    AudioController.instance.PlaySFX(clip);
+
 	    if(level==0) Debug.LogError("Level number cannot be 0");
 	    else if (SceneManager.sceneCount >= level)
 	    {

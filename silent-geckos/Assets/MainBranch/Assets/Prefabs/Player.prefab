@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e4b7e5128423f4badec5df8a601dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: d6a7ade359305504f8e721fe474cfff8, type: 3}
+  clip: {fileID: 8300000, guid: e74db932bc174984db1feb85abaf4337, type: 3}
   player: {fileID: 0}
   checkPointdata: {fileID: 11400000, guid: 7f8a335ef31302b48b307fa5ce120449, type: 2}
 --- !u!114 &6365150353968386174
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ed7fede6409c742b43b7aa2355f43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip: {fileID: 8300000, guid: ef9f62a3d660b4843839a472ffc9be1f, type: 3}
+  clip: {fileID: 8300000, guid: b6d05604d17cc064b8135650bae872f5, type: 3}
   animator: {fileID: 2763792187882040380}
   movementSpeed: 6.36
   jumpForce: 7

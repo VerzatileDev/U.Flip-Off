@@ -2505,7 +2505,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
+  m_fontSize: 128.25
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3376,6 +3376,12 @@ Transform:
   m_Father: {fileID: 1013999253}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &894296115 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2763792187882040380, guid: 776f45e895932bc409f66130c4851fad,
+    type: 3}
+  m_PrefabInstance: {fileID: 2400775295366564585}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &986658607 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2400775296058179014, guid: 776f45e895932bc409f66130c4851fad,
@@ -7477,7 +7483,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 200
+  m_fontSize: 129.15
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7647,6 +7653,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7479916458814391545, guid: 776f45e895932bc409f66130c4851fad,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 894296115}
     - target: {fileID: 7479916458814391547, guid: 776f45e895932bc409f66130c4851fad,
         type: 3}
       propertyPath: m_RootOrder
@@ -7701,6 +7712,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479916458997209797, guid: 776f45e895932bc409f66130c4851fad,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479916458997209797, guid: 776f45e895932bc409f66130c4851fad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 776f45e895932bc409f66130c4851fad, type: 3}

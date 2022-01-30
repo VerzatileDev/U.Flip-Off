@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+
     public Transform firePoint;
     public GameObject bullet;
     float cooldownDuration = 0.5f;
@@ -17,17 +19,19 @@ public class Weapon : MonoBehaviour
         {
             if (cooldown == false)
             {
-                Shoot();
+                StartCoroutine(Shoot());
                 cooldown = true;
                 StartCoroutine(Cooldown());
             }
         }
     }
-    void Shoot()
-
+    IEnumerator Shoot()
     {
+        animator.SetTrigger("ShootTrigger");
+        yield return new WaitForSeconds(.15f);
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
+
     IEnumerator Cooldown()
     {
         yield return new WaitForSeconds(cooldownDuration);

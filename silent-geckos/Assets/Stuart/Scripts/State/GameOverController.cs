@@ -16,7 +16,7 @@ public class GameOverController : MonoBehaviour
 
     public void OnForwardButton()
     {
-        AudioController.instance.PlayButtonClick();
+        if(AudioController.instance!=null) AudioController.instance.PlayButtonClick();
 
         StartCoroutine( MainMenuController.ShowCanvas(gameOverUIController.gameOverScreen, 0f));
         StartCoroutine(  MainMenuController.ShowCanvas(gameOverUIController.upgradeScreen, 1f));

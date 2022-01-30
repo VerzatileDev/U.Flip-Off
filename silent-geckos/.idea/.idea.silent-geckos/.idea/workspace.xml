@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="43f101a7-6208-46b9-89d4-9aeaecc7943c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AudioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AudioMixers/AudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AudioMixers/AudioMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Art/Bullet animation/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Art/Bullet animation/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/GameOverController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/GameOverController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

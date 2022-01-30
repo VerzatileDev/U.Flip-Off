@@ -27,8 +27,8 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        if (rb.velocity.x > 0) this.transform.localScale = new Vector3(2, 2, 0);
-        if (rb.velocity.x < 0) this.transform.localScale = new Vector3(-2, 2, 0);
+        if (rb.velocity.x > 0) this.transform.localScale = new Vector3(6, 6, 0);
+        if (rb.velocity.x < 0) this.transform.localScale = new Vector3(-6, 6, 0);
     }
 
     void OnTriggerEnter2D(Collider2D hitInformation)

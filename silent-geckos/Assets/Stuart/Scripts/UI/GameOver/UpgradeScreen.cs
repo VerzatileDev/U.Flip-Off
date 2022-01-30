@@ -57,7 +57,7 @@ public class UpgradeScreen : MonoBehaviour
 
     public void Purchase(Unlock unlock)
     {
-        AudioController.instance.PlayButtonClick();
+        if(AudioController.instance!=null) AudioController.instance.PlayButtonClick();
 
         if (unlock.isUnlocked == false)
         {

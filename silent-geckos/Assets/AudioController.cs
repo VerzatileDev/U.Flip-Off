@@ -35,4 +35,9 @@ public class AudioController : MonoBehaviour
         sfxSource.PlayOneShot(buttonClickFX);
 
     }
+
+    public void CrossFade()
+    {
+        
+    }
 }

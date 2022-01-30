@@ -34,7 +34,7 @@ public class FlipScript : MonoBehaviour
     {
         StartCoroutine(FlipCooldown());
         AudioController.instance.PlaySFX(clip);
-
+        AudioController.instance.CrossFade();
         GravityIsFlipped = !GravityIsFlipped;
         OnPhaseChange?.Invoke(!GravityIsFlipped);
         Vector3 position = new Vector3(0, player.transform.position.y * -2, 0);

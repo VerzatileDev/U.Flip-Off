@@ -24,7 +24,7 @@ public class EnemyBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.velocity = transform.right * speed * GameObject.FindWithTag("EnemyRanged").transform.localScale.x / 5;
+        rb.velocity = transform.right * speed * GameObject.FindWithTag("EnemyRanged").transform.localScale.x / -5;
     }
 
     void OnTriggerEnter2D(Collider2D hitInformation)

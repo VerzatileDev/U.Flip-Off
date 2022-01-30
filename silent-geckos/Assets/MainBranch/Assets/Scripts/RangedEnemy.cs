@@ -7,6 +7,9 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField] private bool isInRange = false;
     [SerializeField] private bool cooldown = false;
     [SerializeField] private float cooldownDuration = 3f;
+
+    [SerializeField] private Animator animator;
+
     public GameObject bullet;
     public Transform firePoint;
     public Collider2D other;
@@ -31,7 +34,7 @@ public class RangedEnemy : MonoBehaviour
         {
             if (cooldown == false)
             {
-                Shoot();
+                animator.SetTrigger("shoot");
                 cooldown = true;
                 StartCoroutine(Cooldown());
             }
@@ -43,6 +46,8 @@ public class RangedEnemy : MonoBehaviour
     }
     IEnumerator Cooldown()
     {
+        yield return new WaitForSeconds(.05f);
+        Shoot();
         yield return new WaitForSeconds(cooldownDuration);
         cooldown = false;
     }

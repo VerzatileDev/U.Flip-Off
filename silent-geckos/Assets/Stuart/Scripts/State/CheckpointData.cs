@@ -10,7 +10,7 @@ public class CheckpointData : ScoreDataSO
     public bool checkpoint1 = false;
     public bool checkpoint2 = false;
     public bool checkpoint3 = false;
-
+    public bool inHell = false;
 
 
 
@@ -53,5 +53,11 @@ public class CheckpointData : ScoreDataSO
     {
         scoreDataSO.heavenCoins = heavenCoins;
         scoreDataSO.hellCoins = hellCoins;
+    }
+
+    public void Flipped()
+    {
+        Debug.Log("Flipped");
+        inHell = !inHell;
     }
 }

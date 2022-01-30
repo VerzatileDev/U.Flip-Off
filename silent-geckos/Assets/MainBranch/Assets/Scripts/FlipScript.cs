@@ -10,6 +10,7 @@ public class FlipScript : MonoBehaviour
     public event Action<bool> OnPhaseChange;
     private bool isFlipOnCooldown = false;
     private bool isFlipEnabled;
+    [SerializeField] private CheckpointData checkPointdata;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class FlipScript : MonoBehaviour
         if (Input.GetKeyDown("j") && !isFlipOnCooldown && isFlipEnabled)
         {
             Flip();
+            
         }
     }
 
@@ -30,12 +32,14 @@ public class FlipScript : MonoBehaviour
     {
         StartCoroutine(FlipCooldown());
         GravityIsFlipped = !GravityIsFlipped;
+        checkPointdata.Flipped();
         OnPhaseChange?.Invoke(!GravityIsFlipped);
         Vector3 position = new Vector3(0, player.transform.position.y * -2, 0);
         player.transform.Translate(position);
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(player.GetComponent<Rigidbody2D>().velocity.x, player.GetComponent<Rigidbody2D>().velocity.y * -1, 0);
         player.GetComponent<Rigidbody2D>().gravityScale *= -1;
         player.transform.localScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y * -1, 1);
+        
     }
 
     IEnumerator FlipCooldown()

@@ -8,6 +8,7 @@ TagManager:
   - EnemyController
   - Collectable
   - GroundCheck
+  - EnemyRanged
   layers:
   - Default
   - TransparentFX

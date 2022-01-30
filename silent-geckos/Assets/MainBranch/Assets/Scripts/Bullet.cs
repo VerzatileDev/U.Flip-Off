@@ -25,6 +25,12 @@ public class Bullet : MonoBehaviour
         rb.velocity = transform.right * speed * GameObject.FindWithTag("Player").transform.localScale.x/5;
     }
 
+    void Update()
+    {
+        if (rb.velocity.x > 0) this.transform.localScale = new Vector3(2, 2, 0);
+        if (rb.velocity.x < 0) this.transform.localScale = new Vector3(-2, 2, 0);
+    }
+
     void OnTriggerEnter2D(Collider2D hitInformation)
     {
         if (hitInformation.gameObject.CompareTag("Enemy"))

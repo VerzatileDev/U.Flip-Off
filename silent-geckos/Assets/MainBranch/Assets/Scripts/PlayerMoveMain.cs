@@ -8,7 +8,7 @@ public class PlayerMoveMain : MonoBehaviour
 
     [Header("Set Player Forces")]
 
-    [SerializeField] private float movementSpeed;
+    [SerializeField] private float movementSpeed = 6.36f;
     [SerializeField] private float jumpForce;
 
     [Header("Player Collision Checks")]
@@ -19,7 +19,7 @@ public class PlayerMoveMain : MonoBehaviour
     [SerializeField] private LayerMask jumpableObjects;
 
     [Header("Player Jump Information")]
-    [SerializeField] private int maxJumpCount;
+    [SerializeField] private int maxJumpCount = 0;
     [SerializeField] private int jumpsAvailable;
     [Tooltip("Makes A circle with Radius : __ :  From   groundCheck  and check if Radius Inside or Touching jumpableObjects ")]
     [SerializeField] private float checkRadius;
@@ -27,7 +27,8 @@ public class PlayerMoveMain : MonoBehaviour
     [SerializeField] private bool isJumping = false;
     [SerializeField] private bool isMovementEnabled;
     [Header("Unlocks")] [SerializeField] private Unlock movementSpeed1;
-  [SerializeField] private Unlock movementSpeed2;
+    [SerializeField] private Unlock movementSpeed2;
+    [SerializeField] private Unlock doubleJump;
 
     //[Header("Player Direction")]
     private bool facingRight = true;
@@ -48,6 +49,7 @@ public class PlayerMoveMain : MonoBehaviour
 
     void Update() // Once per frame
     {
+        if (doubleJump.isUnlocked) maxJumpCount = 1;
         MovementSpeedUnlock();
         Processinputs();
         Animate();

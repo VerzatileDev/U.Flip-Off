@@ -7,8 +7,12 @@ public class Dash : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private bool isDashOnCooldown = false;
-    [SerializeField] private Unlock dashUnlock;
     [SerializeField] static public bool isMovementEnabled = true;
+    [SerializeField] private float dashCooldown = 1f;
+
+    [Header("Unlocks")] [SerializeField] private Unlock dash;
+    [SerializeField] private Unlock dash1;
+    [SerializeField] private Unlock dash2;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +23,9 @@ public class Dash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("l") && !isDashOnCooldown && dashUnlock.isUnlocked)
+        if (dash1.isUnlocked) dashCooldown = .8f;
+        if (dash2.isUnlocked) dashCooldown = .6f;
+        if (Input.GetKeyDown("l") && !isDashOnCooldown && dash.isUnlocked)
         {
             StartCoroutine(DashCR());
         }
@@ -36,7 +42,7 @@ public class Dash : MonoBehaviour
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         player.GetComponent<Rigidbody2D>().gravityScale = temp;
         isMovementEnabled = true;
-        yield return new WaitForSeconds(.8f);
+        yield return new WaitForSeconds(dashCooldown);
         isDashOnCooldown = false;
     }
 }

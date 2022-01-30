@@ -9,8 +9,12 @@ public class Weapon : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bullet;
-    float cooldownDuration = 0.75f;
+    float cooldownDuration = 0.9f;
     bool cooldown = false;
+
+    [Header("Unlocks")] [SerializeField] private Unlock shootSpeed1;
+    [SerializeField] private Unlock shootSpeed2;
+    [SerializeField] private Unlock shoot;
 
     void Start()
     {
@@ -20,7 +24,8 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("k"))
+        MovementSpeedUnlock();
+        if ((Input.GetButtonDown("Fire1") || Input.GetKeyDown("k")) && shoot.isUnlocked)
         {
             if (cooldown == false)
             {
@@ -30,6 +35,13 @@ public class Weapon : MonoBehaviour
             }
         }
     }
+
+    private void MovementSpeedUnlock()
+    {
+        if (shootSpeed1.isUnlocked) cooldownDuration = .75f;
+        if (shootSpeed2.isUnlocked) cooldownDuration = .6f;
+    }
+
     IEnumerator Shoot()
     {
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;

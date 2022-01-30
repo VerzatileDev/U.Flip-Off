@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 public class Editor_MenuItems : MonoBehaviour
 {
-    [MenuItem("Stuart Custom Debug/WipeCheckpointData")]
+    [MenuItem("Stuart Custom Debug/Wipe/WipeCheckpointData")]
     static void WipeCheckpointData()
     {
         if (!Application.isPlaying) return;
@@ -14,7 +14,7 @@ public class Editor_MenuItems : MonoBehaviour
 	        d.Wipe();
         }
     }
-    [MenuItem("Stuart Custom Debug/WipeCumulativeData")]
+    [MenuItem("Stuart Custom Debug/Wipe/WipeCumulativeData")]
     static void WipeCumulativeData()
     {
         if (!Application.isPlaying) return;
@@ -24,7 +24,7 @@ public class Editor_MenuItems : MonoBehaviour
             d.Wipe();
         }
     }
-    [MenuItem("Stuart Custom Debug/WipeUnlockData")]
+    [MenuItem("Stuart Custom Debug/Wipe/WipeUnlockData")]
 
     static void WipeUnlockData()
     {
@@ -35,7 +35,7 @@ public class Editor_MenuItems : MonoBehaviour
             d.Wipe();
         }
     }
-    [MenuItem("Stuart Custom Debug/WipeLevelData")]
+    [MenuItem("Stuart Custom Debug/Wipe/WipeLevelData")]
 
     static void WipeLevelData()
     {
@@ -46,8 +46,33 @@ public class Editor_MenuItems : MonoBehaviour
             d.Clear();
         }
     }
+    [MenuItem("Stuart Custom Debug/Give/GiveMoney")]
+
+    static void GiveMoney()
+    {
+        if (!Application.isPlaying) return;
+        CumScoreData[] data = Resources.FindObjectsOfTypeAll<CumScoreData>();
+        foreach (var d in data)
+        {
+            d.heavenCoins = 99999;
+            d.hellCoins = 99999;
+
+        }
+    }
     
-    [MenuItem("Stuart Custom Debug/WipeAllData")]
+    [MenuItem("Stuart Custom Debug/Give/GiveUnlocks")]
+
+    static void GiveUnlocks()
+    {
+        if (!Application.isPlaying) return;
+        Unlock[] data = Resources.FindObjectsOfTypeAll<Unlock>();
+        foreach (var d in data)
+        {
+            d.isUnlocked = true;
+        }
+    }
+    
+    [MenuItem("Stuart Custom Debug/Wipe/WipeAllData")]
 
     static void WipeAllDataData()
     {

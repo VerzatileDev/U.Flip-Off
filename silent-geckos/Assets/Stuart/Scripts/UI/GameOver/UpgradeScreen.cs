@@ -50,38 +50,44 @@ public class UpgradeScreen : MonoBehaviour
 
     public void Purchase(Unlock unlock)
     {
-        switch (unlock.heavenOrHell)
+        if (unlock.isUnlocked == false)
         {
-            case Unlock.HeavenOrHell.Heaven:
-                if (unlock.cost <= data.heavenCoins)
-                {
-                    unlock.isUnlocked = true;
-                    data.heavenCoins -= unlock.cost;
 
-                }
-                data.heavenCoins -= unlock.cost;
-                break;
-            case Unlock.HeavenOrHell.Hell:
-                if (unlock.cost <= data.hellCoins)
-                {
-                    unlock.isUnlocked = true;
-                    data.heavenCoins -= unlock.cost;
-                }
-                break;
-            case Unlock.HeavenOrHell.Both:
-          
-                if (unlock.cost <= (data.hellCoins+data.heavenCoins))
-                {
-                    unlock.isUnlocked = true;
-                    data.hellCoins -= unlock.cost;
-                    if (data.hellCoins < 0)
+            switch (unlock.heavenOrHell)
+            {
+                case Unlock.HeavenOrHell.Heaven:
+                    if (unlock.cost <= data.heavenCoins)
                     {
-                        data.heavenCoins -= Mathf.Abs(data.hellCoins);
-                        data.hellCoins = 0;
-                    }
-                }
-                break;
-        }
+                        unlock.isUnlocked = true;
+                        data.heavenCoins -= unlock.cost;
 
+                    }
+
+                    data.heavenCoins -= unlock.cost;
+                    break;
+                case Unlock.HeavenOrHell.Hell:
+                    if (unlock.cost <= data.hellCoins)
+                    {
+                        unlock.isUnlocked = true;
+                        data.heavenCoins -= unlock.cost;
+                    }
+
+                    break;
+                case Unlock.HeavenOrHell.Both:
+
+                    if (unlock.cost <= (data.hellCoins + data.heavenCoins))
+                    {
+                        unlock.isUnlocked = true;
+                        data.hellCoins -= unlock.cost;
+                        if (data.hellCoins < 0)
+                        {
+                            data.heavenCoins -= Mathf.Abs(data.hellCoins);
+                            data.hellCoins = 0;
+                        }
+                    }
+
+                    break;
+            }
+        }
     }
 }

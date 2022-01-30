@@ -47,6 +47,13 @@ public class PlayerMoveMain : MonoBehaviour
         jumpsAvailable = maxJumpCount;
     }
 
+    int verticalScale(bool Bool)
+    {
+        if (Bool) return -1;
+        if (!Bool) return 1;
+        else return 0;
+    }
+
     void Update() // Once per frame
     {
         if (doubleJump.isUnlocked) maxJumpCount = 1;
@@ -60,6 +67,22 @@ public class PlayerMoveMain : MonoBehaviour
         else
         {
             animator.SetBool("isRunning", false);
+        }
+        if (PlayerBody.velocity.y * verticalScale(gravityState) > 0)
+        {
+            animator.SetBool("isGoingUp", true);
+        }
+        else
+        {
+            animator.SetBool("isGoingUp", false);
+        }
+        if (PlayerBody.velocity.y * verticalScale(gravityState) < 0)
+        {
+            animator.SetBool("isGoingDown", true);
+        }
+        else
+        {
+            animator.SetBool("isGoingDown", false);
         }
     }
 

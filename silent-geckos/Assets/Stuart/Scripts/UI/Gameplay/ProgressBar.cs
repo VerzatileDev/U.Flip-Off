@@ -6,7 +6,6 @@ using Unity.Mathematics;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
-using FMODUnity;
 
 public class ProgressBar : MonoBehaviour
 {
@@ -100,9 +99,9 @@ public class ProgressBar : MonoBehaviour
 			if (currentPos.x -amount> range*-1) rectTransform.localPosition = new Vector3(currentPos.x-=amount,currentPos.y,currentPos.z);
 		}
 		scoreDataSo.progressBar = Map((int)rectTransform.localPosition.x,range*-1, range, 0,1);
-		            var emitter = FindObjectOfType<StudioEventEmitter>();
+		  //          var emitter = FindObjectOfType<StudioEventEmitter>();
           // 	emitter.SetParameter("Slider", scoreDataSo.progressBar);
-		  emitter.SetParameter("Slider", 1f);
+		 // emitter.SetParameter("Slider", 1f);
 
 	}
 	private float ConvertToSlideVal(float _incrementPerSecond)

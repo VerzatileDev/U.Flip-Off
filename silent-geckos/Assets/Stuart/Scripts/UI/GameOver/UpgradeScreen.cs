@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,7 @@ public class UpgradeScreen : MonoBehaviour
     [SerializeField] private GameObject uiContainer;
     [SerializeField] private List<UpgradeButton> buttons = new List<UpgradeButton>();
     [SerializeField] private CumScoreData data;
+    [SerializeField] private TextMeshProUGUI totalCoins;
     private void Start()
     {
         GenerateButtons();
@@ -30,6 +32,7 @@ public class UpgradeScreen : MonoBehaviour
 
     private void Update()
     {
+        totalCoins.text = "Total Coins = " + (data.hellCoins + data.heavenCoins);
     }
 
     
@@ -50,38 +53,44 @@ public class UpgradeScreen : MonoBehaviour
 
     public void Purchase(Unlock unlock)
     {
-        switch (unlock.heavenOrHell)
+        if (unlock.isUnlocked == false)
         {
-            case Unlock.HeavenOrHell.Heaven:
-                if (unlock.cost <= data.heavenCoins)
-                {
-                    unlock.isUnlocked = true;
-                    data.heavenCoins -= unlock.cost;
 
-                }
-                data.heavenCoins -= unlock.cost;
-                break;
-            case Unlock.HeavenOrHell.Hell:
-                if (unlock.cost <= data.hellCoins)
-                {
-                    unlock.isUnlocked = true;
-                    data.heavenCoins -= unlock.cost;
-                }
-                break;
-            case Unlock.HeavenOrHell.Both:
-          
-                if (unlock.cost <= (data.hellCoins+data.heavenCoins))
-                {
-                    unlock.isUnlocked = true;
-                    data.hellCoins -= unlock.cost;
-                    if (data.hellCoins < 0)
+            switch (unlock.heavenOrHell)
+            {
+                case Unlock.HeavenOrHell.Heaven:
+                    if (unlock.cost <= data.heavenCoins)
                     {
-                        data.heavenCoins -= Mathf.Abs(data.hellCoins);
-                        data.hellCoins = 0;
-                    }
-                }
-                break;
-        }
+                        unlock.isUnlocked = true;
+                        data.heavenCoins -= unlock.cost;
 
+                    }
+
+                    data.heavenCoins -= unlock.cost;
+                    break;
+                case Unlock.HeavenOrHell.Hell:
+                    if (unlock.cost <= data.hellCoins)
+                    {
+                        unlock.isUnlocked = true;
+                        data.heavenCoins -= unlock.cost;
+                    }
+
+                    break;
+                case Unlock.HeavenOrHell.Both:
+
+                    if (unlock.cost <= (data.hellCoins + data.heavenCoins))
+                    {
+                        unlock.isUnlocked = true;
+                        data.hellCoins -= unlock.cost;
+                        if (data.hellCoins < 0)
+                        {
+                            data.heavenCoins -= Mathf.Abs(data.hellCoins);
+                            data.hellCoins = 0;
+                        }
+                    }
+
+                    break;
+            }
+        }
     }
 }

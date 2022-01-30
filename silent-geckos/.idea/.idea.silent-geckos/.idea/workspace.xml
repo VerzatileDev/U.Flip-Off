@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="43f101a7-6208-46b9-89d4-9aeaecc7943c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/SO/CheckpointData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/SO/CheckpointData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/SO/CumusScoreData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/SO/CumusScoreData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/SO/LevelData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/SO/LevelData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/CheckpointData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/CheckpointData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Filip/InsanityInMyBrain.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Art.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Audio.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/Gameplay/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/Gameplay/ProgressBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scriptz.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +18,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/Editor_MenuItems.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/Settings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/LevelSelect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Stuart/Scripts/UI/MainMenu/Tutorial.cs" root0="FORCE_HIGHLIGHTING" />
@@ -82,26 +83,18 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/State/CheckpointData.cs</url>
-          <line>20</line>
-          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\State\CheckpointData.cs" initialLine="20" containingFunctionPresentation="method 'MergeData'">
-            <startOffsets>
-              <option value="507" />
-            </startOffsets>
-            <endOffsets>
-              <option value="545" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -48,7 +48,6 @@ public class ProgressBar : MonoBehaviour
 		RectTransform rectTransform = sliderImage.GetComponent<RectTransform>();
 		rectTransform.localPosition = new Vector3(Map(scoreDataSo.progressBar, 0,1,range*-1, range),
 			rectTransform.localPosition.y, rectTransform.localPosition.z);
-		Debug.Log("Setting rect x to " + Map(scoreDataSo.progressBar, 0,1,range*-1, range) );
 	}
 
 

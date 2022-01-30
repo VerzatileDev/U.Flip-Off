@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,7 @@ public class UpgradeScreen : MonoBehaviour
     [SerializeField] private GameObject uiContainer;
     [SerializeField] private List<UpgradeButton> buttons = new List<UpgradeButton>();
     [SerializeField] private CumScoreData data;
+    [SerializeField] private TextMeshProUGUI totalCoins;
     private void Start()
     {
         GenerateButtons();
@@ -30,6 +32,7 @@ public class UpgradeScreen : MonoBehaviour
 
     private void Update()
     {
+        totalCoins.text = "Total Coins = " + (data.hellCoins + data.heavenCoins);
     }
 
     

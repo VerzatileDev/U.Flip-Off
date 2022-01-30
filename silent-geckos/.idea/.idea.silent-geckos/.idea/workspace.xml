@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43f101a7-6208-46b9-89d4-9aeaecc7943c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Editor/Editor_MenuItems.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Editor/Editor_MenuItems.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/UpgradeScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/GameOver/UpgradeScreen.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

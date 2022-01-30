@@ -10,7 +10,6 @@ public class UpgradeButton : MonoBehaviour
     private Unlock unlock;
     [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private TextMeshProUGUI cost;
-    [SerializeField] private TextMeshProUGUI heavenorhell;
     private UnityEngine.UI.Image image;
     private UpgradeScreen screen;
     private void Awake()
@@ -25,7 +24,6 @@ public class UpgradeButton : MonoBehaviour
         if (unlock == null) return;
         name.text= unlock.unlockName.ToString();
         cost.text= unlock.cost.ToString();
-        heavenorhell.text= unlock.heavenOrHell.ToString();
 
     }
 

@@ -14,6 +14,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-5187161015883486482
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attenuation
+  m_EffectID: a4338f0c2ccee434bbe9df002a3f3a9f
+  m_EffectName: Attenuation
+  m_MixLevel: 6fcc215b8967a1f42909f14808d30d8c
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -29,12 +43,17 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 10d56f4562133b646b0b3b0c04111858
+    name: Heaven
+  - guid: 6a5be859516666840bc3d99a9f20f88d
+    name: Hell
   m_AudioMixerGroupViews:
   - guids:
     - 6ea716ac618c3164da9a51ac603cd8a4
     - 840ee90f811d2ac4ba5fd90dd8a54416
     - e91ed8046a7129944955e4d6a60bcfc8
+    - 0569509ddafaf3e4cb318d66e34448e3
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -50,6 +69,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 4083444206396053487}
   - {fileID: 1835878573769774387}
+  - {fileID: 2639100715097836201}
   m_Volume: 6408c5589562ed94c9ca74d7444bf6d6
   m_Pitch: 953020ca4bcfe32448cdfbbc57f5d56a
   m_Send: 00000000000000000000000000000000
@@ -91,7 +111,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Music
+  m_Name: Heaven
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 840ee90f811d2ac4ba5fd90dd8a54416
   m_Children: []
@@ -100,6 +120,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -6591013319882547193}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &2639100715097836201
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hell
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 0569509ddafaf3e4cb318d66e34448e3
+  m_Children: []
+  m_Volume: 6a5be859516666840bc3d99a9f20f88d
+  m_Pitch: 4dcda638eea62ca41a37512688d44543
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -5187161015883486482}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0

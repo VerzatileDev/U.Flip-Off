@@ -9,7 +9,7 @@ public class Weapon : MonoBehaviour
 
     public Transform firePoint;
     public GameObject bullet;
-    float cooldownDuration = 0.5f;
+    float cooldownDuration = 0.75f;
     bool cooldown = false;
 
     void Start()

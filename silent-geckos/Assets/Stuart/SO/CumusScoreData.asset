@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heavenCoins: 1
   hellCoins: 0
-  progressBar: 6.300001
+  progressBar: 0
   lastLevel: {fileID: 11400000, guid: 1a37c207d31ce59458dc801953128775, type: 2}
   isWin: 1

@@ -46,8 +46,9 @@ public class ProgressBar : MonoBehaviour
 	private void SetSliderPosition()
 	{
 		RectTransform rectTransform = sliderImage.GetComponent<RectTransform>();
-		rectTransform.position = new Vector3(Map(scoreDataSo.progressBar, -1, 1, range * -1, range),
-			rectTransform.position.y, rectTransform.position.z);
+		rectTransform.localPosition = new Vector3(Map(scoreDataSo.progressBar, 0,1,range*-1, range),
+			rectTransform.localPosition.y, rectTransform.localPosition.z);
+		Debug.Log("Setting rect x to " + Map(scoreDataSo.progressBar, 0,1,range*-1, range) );
 	}
 
 
@@ -63,9 +64,6 @@ public class ProgressBar : MonoBehaviour
 
 	private void UpdateDirection(bool _isHeaven) => isHeaven = _isHeaven;
 	
-
-
-
 	private void StartLevel()
 	{
 		StopLevel();
@@ -112,7 +110,6 @@ public class ProgressBar : MonoBehaviour
 	private static float Map(float value, int startLow, int startHigh, int toLow, int toHigh) 
 	{
 		float val =(value - startLow) * (toHigh - toLow) / (startHigh - startLow) + toLow;
-		Debug.Log(val);
 		return val;
 	}
 }

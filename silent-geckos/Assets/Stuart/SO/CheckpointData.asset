@@ -16,3 +16,6 @@ MonoBehaviour:
   hellCoins: 0
   progressBar: 0
   position: {x: 0, y: 0}
+  checkpoint1: 0
+  checkpoint2: 0
+  checkpoint3: 0

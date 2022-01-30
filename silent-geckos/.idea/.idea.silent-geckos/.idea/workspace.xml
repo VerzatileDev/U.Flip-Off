@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43f101a7-6208-46b9-89d4-9aeaecc7943c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Respawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Respawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/LevelEndMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/SO/CheckpointData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/SO/CheckpointData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/SO/CumusScoreData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/SO/CumusScoreData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/SO/LevelData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/SO/LevelData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/CheckpointData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/State/CheckpointData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/Gameplay/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/Gameplay/ProgressBar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,10 +52,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3168">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="3168" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -82,5 +84,24 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Stuart/Scripts/State/CheckpointData.cs</url>
+          <line>20</line>
+          <properties documentPath="S:\Users\pkplo\OneDrive\Documents\UnityProjects\GlobalGameJam2021\silent-geckos-Jam\silent-geckos\Assets\Stuart\Scripts\State\CheckpointData.cs" initialLine="20" containingFunctionPresentation="method 'MergeData'">
+            <startOffsets>
+              <option value="507" />
+            </startOffsets>
+            <endOffsets>
+              <option value="545" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

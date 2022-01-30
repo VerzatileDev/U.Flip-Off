@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private AudioClip clip;
+
     [SerializeField] private GameObject player;
     [SerializeField] private Animator animator;
 
@@ -44,6 +46,7 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Shoot()
     {
+        AudioController.instance.PlaySFX(clip);
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         animator.SetTrigger("ShootTrigger");
         yield return new WaitForSeconds(.15f);

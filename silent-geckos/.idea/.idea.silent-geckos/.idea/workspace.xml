@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="43f101a7-6208-46b9-89d4-9aeaecc7943c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.silent-geckos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AudioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Scenes/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/Gameplay/ProgressBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stuart/Scripts/UI/Gameplay/ProgressBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Dash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Dash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Death.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Death.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Weapon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainBranch/Assets/Scripts/Weapon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

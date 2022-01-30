@@ -5,6 +5,8 @@ using System; // For Action
 
 public class FlipScript : MonoBehaviour
 {
+    [SerializeField] private AudioClip clip;
+
     [SerializeField] private GameObject player; // Hidden Globally, Shown In Inspector. ( Since not nessecary to Call it Anywhere Else as Generally Attached to Player Object )
     public static bool GravityIsFlipped;
     public event Action<bool> OnPhaseChange;
@@ -31,6 +33,8 @@ public class FlipScript : MonoBehaviour
     public void Flip()
     {
         StartCoroutine(FlipCooldown());
+        AudioController.instance.PlaySFX(clip);
+
         GravityIsFlipped = !GravityIsFlipped;
         OnPhaseChange?.Invoke(!GravityIsFlipped);
         Vector3 position = new Vector3(0, player.transform.position.y * -2, 0);

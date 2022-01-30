@@ -2,6 +2,8 @@
 
 public class PlayerMoveMain : MonoBehaviour
 {
+    [SerializeField] private AudioClip clip;
+
     private Rigidbody2D PlayerBody;
 
     [SerializeField] private Animator animator;
@@ -121,6 +123,8 @@ public class PlayerMoveMain : MonoBehaviour
             PlayerBody.velocity = new Vector2(moveDirection * movementSpeed, PlayerBody.velocity.y);
             if (isJumping && (jumpsAvailable > 0 || isGrounded))
             {
+                AudioController.instance.PlaySFX(clip);
+
                 PlayerBody.velocity = new Vector3(PlayerBody.velocity.x, 0, 0);
                 if (gravityState) value = -jumpForce; else value = jumpForce;
                 PlayerBody.AddForce(new Vector2(0f, value), ForceMode2D.Impulse);

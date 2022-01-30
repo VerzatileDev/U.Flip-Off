@@ -5,6 +5,8 @@ using System;
 
 public class Dash : MonoBehaviour
 {
+    [SerializeField] private AudioClip clip;
+
     [SerializeField] private GameObject player;
     [SerializeField] private bool isDashOnCooldown = false;
     [SerializeField] static public bool isMovementEnabled = true;
@@ -33,6 +35,8 @@ public class Dash : MonoBehaviour
 
     IEnumerator DashCR()
     {
+        AudioController.instance.PlaySFX(clip);
+
         isDashOnCooldown = true;
         float temp = player.GetComponent<Rigidbody2D>().gravityScale;
         player.GetComponent<Rigidbody2D>().gravityScale = 0;

@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b22ad2614c9fe04ba3d002dc438adef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: dcf50ec80141a2f4297e659ab6e92128, type: 3}
   player: {fileID: 0}
   animator: {fileID: 2763792187882040380}
   firePoint: {fileID: 7479916458997209797}
@@ -201,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58e4b7e5128423f4badec5df8a601dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: d6a7ade359305504f8e721fe474cfff8, type: 3}
   player: {fileID: 0}
   checkPointdata: {fileID: 11400000, guid: 7f8a335ef31302b48b307fa5ce120449, type: 2}
 --- !u!114 &6365150353968386174
@@ -215,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ed7fede6409c742b43b7aa2355f43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: ef9f62a3d660b4843839a472ffc9be1f, type: 3}
   animator: {fileID: 2763792187882040380}
   movementSpeed: 6.36
   jumpForce: 7
@@ -268,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca47b51e0450f5641acd40981f32f611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3c4088aaa7f7e56499de288aec89e953, type: 3}
   player: {fileID: 0}
 --- !u!114 &5120452412221582360
 MonoBehaviour:
@@ -281,6 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94ccff71d2a470f48928cf236754a4a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 146abf01fa4684b4e98acbd992fb2071, type: 3}
   player: {fileID: 0}
   isDashOnCooldown: 0
   dashCooldown: 1

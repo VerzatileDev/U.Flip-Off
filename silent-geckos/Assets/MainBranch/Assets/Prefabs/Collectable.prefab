@@ -111,6 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe1cfb2de038b940b90fab3447e48b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 06f18dc53e1a61b4bb3dac93726ee519, type: 3}
   collectableValue: 1
   isGood: 0
   isEvil: 0

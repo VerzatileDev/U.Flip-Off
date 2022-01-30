@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CollectableManager : MonoBehaviour
 {
+    [SerializeField] private AudioClip clip;
+
     public int collectableValue = 1;
     public bool isGood = false;
     public bool isEvil = false;
@@ -12,6 +14,8 @@ public class CollectableManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            AudioController.instance.PlaySFX(clip);
+
             if (isGood == true)
             {
                 ScoreManager.instance.ChangeScoreGood(collectableValue);

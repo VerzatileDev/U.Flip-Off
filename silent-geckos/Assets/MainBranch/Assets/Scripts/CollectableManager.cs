@@ -16,11 +16,14 @@ public class CollectableManager : MonoBehaviour
             {
                 ScoreManager.instance.ChangeScoreGood(collectableValue);
                 Destroy(gameObject);
+                Destroy(transform.parent.gameObject);
+
             }
             if (isEvil == true)
             {
                 ScoreManager.instance.ChangeScoreEvil(collectableValue);
                 Destroy(gameObject);
+                Destroy(transform.parent.gameObject);
             }
         }
     }

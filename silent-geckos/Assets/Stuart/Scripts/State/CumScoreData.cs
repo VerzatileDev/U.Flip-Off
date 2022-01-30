@@ -20,4 +20,12 @@ public class CumScoreData : ScoreDataSO
         progressBar += lastLevel.progressBar;
         lastLevel.Clear();
     }
+
+    public void Wipe()
+    {
+        heavenCoins = 0;
+        hellCoins  = 0;
+        progressBar  = 0;
+        isWin = false;
+    }
 }

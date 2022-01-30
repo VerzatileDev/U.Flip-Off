@@ -9,7 +9,13 @@ public class EndScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            LevelController levelController = FindObjectOfType<LevelController>();
+            if (levelController != null)
+            {
+                levelController.LevelEnd(true);
+            }
             SceneManager.LoadScene("LevelEndMenu");
+           
         }
     }
 }

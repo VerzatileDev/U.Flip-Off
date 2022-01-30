@@ -10,7 +10,7 @@ public class MainMenuController : MonoBehaviour
    [SerializeField]private CanvasGroup MainMenuCG;
    [SerializeField]private CanvasGroup SettingsCG;
    [SerializeField]private CanvasGroup TutorialCG;
-   private static readonly float AnimationTime = .75f;
+   private static readonly float AnimationTime = .2f;
    [SerializeField] private LevelState levelState;
    #endregion
    

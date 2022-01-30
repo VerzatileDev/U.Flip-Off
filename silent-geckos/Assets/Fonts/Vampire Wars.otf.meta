@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 2dfd0c7b6a6261b40a3f9679cb11e1df
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Vampire Wars
+  fontNames:
+  - Vampire Wars
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 92163f6b1c0263941a8a596a02b0774a, type: 3}
+  - {fileID: 12800000, guid: a9c7235c48e212b47b82d1847f2de6ce, type: 3}
+  - {fileID: 12800000, guid: d5e3d20dbd139be4d86f26845df0ab0d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

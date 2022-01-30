@@ -66,8 +66,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cost
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c3e6f58a589fa6c4ba1f84d74cad6c91, type: 2}
+  m_sharedMaterial: {fileID: 4038651952153592912, guid: c3e6f58a589fa6c4ba1f84d74cad6c91,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -91,7 +92,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 42.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -188,7 +189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: {fileID: 3863492950492054447}
   cost: {fileID: 2950968187614477316}
-  heavenorhell: {fileID: 0}
 --- !u!222 &952904273792657400
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -348,8 +348,9 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c3e6f58a589fa6c4ba1f84d74cad6c91, type: 2}
+  m_sharedMaterial: {fileID: 4038651952153592912, guid: c3e6f58a589fa6c4ba1f84d74cad6c91,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -373,7 +374,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 42.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

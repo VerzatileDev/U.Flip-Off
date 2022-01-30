@@ -11,7 +11,7 @@ public class CheckpointData : ScoreDataSO
     public bool checkpoint2 = false;
     public bool checkpoint3 = false;
     public bool inHell = false;
-
+    [SerializeField] private AudioClip clip;
 
 
     public void MergeData(ScoreDataSO scoreDataSO)
@@ -23,7 +23,11 @@ public class CheckpointData : ScoreDataSO
     public void SaveLocation(Vector2 checkPosition)
     {
         position = checkPosition;
+        AudioController.instance.PlaySFX(clip);
     }
+
+    
+
     public void SaveCheckpoint(int checkpoint)
     {
         if (checkpoint == 1)

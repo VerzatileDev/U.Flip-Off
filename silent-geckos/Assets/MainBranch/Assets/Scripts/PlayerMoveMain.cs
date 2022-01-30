@@ -96,11 +96,12 @@ public class PlayerMoveMain : MonoBehaviour
         if (isMovementEnabled)
         {
             PlayerBody.velocity = new Vector2(moveDirection * movementSpeed, PlayerBody.velocity.y);
-            if (isJumping)
+            if (isJumping && (jumpsAvailable > 0 || isGrounded))
             {
+                PlayerBody.velocity = new Vector3(PlayerBody.velocity.x, 0, 0);
                 if (gravityState) value = -jumpForce; else value = jumpForce;
                 PlayerBody.AddForce(new Vector2(0f, value), ForceMode2D.Impulse);
-                jumpsAvailable--;
+                if (!isGrounded) jumpsAvailable--;
                 isJumping = false;
             }
         }

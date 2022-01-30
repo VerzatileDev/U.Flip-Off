@@ -48,6 +48,7 @@ public class CheckpointData : ScoreDataSO
         checkpoint1 = false;
         checkpoint2 = false;
         checkpoint3 = false;
+        inHell = false;
     }
     
     public void Respawn(ScoreDataSO scoreDataSO)

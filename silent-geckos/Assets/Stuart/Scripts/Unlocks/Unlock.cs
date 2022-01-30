@@ -16,5 +16,9 @@ public class Unlock : ScriptableObject
         public HeavenOrHell heavenOrHell;
         public int cost;
         public bool isUnlocked;
-    
+
+        public void Wipe()
+        {
+            isUnlocked = false;
+        }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LevelData
   m_EditorClassIdentifier: 
   heavenCoins: 0
-  hellCoins: 1
+  hellCoins: 0
   progressBar: 0

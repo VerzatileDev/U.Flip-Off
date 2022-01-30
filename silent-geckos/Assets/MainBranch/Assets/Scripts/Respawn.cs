@@ -33,6 +33,7 @@ public class Respawn : MonoBehaviour
             {
                 player.GetComponent<Rigidbody2D>().gravityScale *= -1;
                 player.transform.localScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y * -1, 1);
+                FlipScript.GravityIsFlipped = true;
             }
         }
         else if (checkPointdata.checkpoint2 == true)
@@ -49,6 +50,7 @@ public class Respawn : MonoBehaviour
             {
                 player.GetComponent<Rigidbody2D>().gravityScale *= -1;
                 player.transform.localScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y * -1, 1);
+                FlipScript.GravityIsFlipped = true;
             }
         }
 
@@ -66,6 +68,7 @@ public class Respawn : MonoBehaviour
             {
                 player.GetComponent<Rigidbody2D>().gravityScale *= -1;
                 player.transform.localScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y * -1, 1);
+                FlipScript.GravityIsFlipped = true;
             }
         }
     }

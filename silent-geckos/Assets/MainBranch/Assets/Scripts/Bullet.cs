@@ -38,6 +38,7 @@ public class Bullet : MonoBehaviour
             Destroy(hitInformation.gameObject);
             Destroy(gameObject);
         }
+        else if (hitInformation.gameObject.CompareTag("EnemyRanged")) ;
         else if (!hitInformation.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);

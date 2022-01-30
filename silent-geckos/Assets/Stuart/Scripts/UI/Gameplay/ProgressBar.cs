@@ -30,6 +30,8 @@ public class ProgressBar : MonoBehaviour
     
 	private void OnEnable()
 	{
+		flipScript = FindObjectOfType<FlipScript>();
+		
         if (flipScript == null) Debug.LogWarning("No flip script on progress bar");
         else flipScript.OnPhaseChange += UpdateDirection;
 		levelState.OnLevelStart += StartLevel;

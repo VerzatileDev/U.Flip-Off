@@ -19,13 +19,21 @@ public class AudioController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        musicSource.Play();
+    }
+
     public void PlaySFX(AudioClip clip)
     {
+        Debug.Log("playing " + clip.name);
+
         sfxSource.PlayOneShot(clip);
     }
 
     public void PlayButtonClick()
     {
+        Debug.Log("playing UI Click");
         sfxSource.PlayOneShot(buttonClickFX);
 
     }

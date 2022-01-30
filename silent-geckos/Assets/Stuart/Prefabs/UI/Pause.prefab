@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popup: {fileID: 6231190347495902337}
+  clip: {fileID: 8300000, guid: 0ce1e77745acef54490ff4125e851cc3, type: 3}
 --- !u!1 &6231190347347486456
 GameObject:
   m_ObjectHideFlags: 0

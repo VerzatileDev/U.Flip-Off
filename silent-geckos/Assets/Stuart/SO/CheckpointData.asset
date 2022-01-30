@@ -20,3 +20,4 @@ MonoBehaviour:
   checkpoint2: 0
   checkpoint3: 0
   inHell: 0
+  clip: {fileID: 8300000, guid: 132abba8d5c09784dae2e385a2c91144, type: 3}

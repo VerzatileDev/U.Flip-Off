@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RangedEnemy : MonoBehaviour
@@ -7,12 +6,12 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField] private bool isInRange = false;
     [SerializeField] private bool cooldown = false;
     [SerializeField] private float cooldownDuration = 3f;
-
     [SerializeField] private Animator animator;
 
     public GameObject bullet;
     public Transform firePoint;
     public Collider2D other;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -28,6 +27,7 @@ public class RangedEnemy : MonoBehaviour
             isInRange = false;
         }
     }
+
     void Update()
     {
         if (isInRange == true)
@@ -40,10 +40,12 @@ public class RangedEnemy : MonoBehaviour
             }
         }
     }
+
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
+
     IEnumerator Cooldown()
     {
         yield return new WaitForSeconds(.05f);

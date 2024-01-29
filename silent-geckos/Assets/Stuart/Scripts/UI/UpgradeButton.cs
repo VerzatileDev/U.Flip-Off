@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class UpgradeButton : MonoBehaviour
 {
     private Unlock unlock;
-    [SerializeField] private TextMeshProUGUI name;
+    [SerializeField] private TextMeshProUGUI buttonName;
     [SerializeField] private TextMeshProUGUI cost;
     private UnityEngine.UI.Image image;
     private UpgradeScreen screen;
@@ -22,7 +18,7 @@ public class UpgradeButton : MonoBehaviour
         screen = _screen;
         unlock = _unlock;
         if (unlock == null) return;
-        name.text= unlock.unlockName.ToString();
+        buttonName.text= unlock.unlockName.ToString();
         cost.text= unlock.cost.ToString();
 
     }

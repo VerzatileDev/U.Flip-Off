@@ -1,11 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private AudioClip clip;
-
     [SerializeField] private GameObject player;
     [SerializeField] private Animator animator;
 
@@ -23,7 +21,6 @@ public class Weapon : MonoBehaviour
         player = GameObject.FindWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         MovementSpeedUnlock();

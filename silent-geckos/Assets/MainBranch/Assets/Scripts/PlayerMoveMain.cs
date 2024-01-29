@@ -56,7 +56,7 @@ public class PlayerMoveMain : MonoBehaviour
         else return 0;
     }
 
-    void Update() // Once per frame
+    void Update()
     {
         if (doubleJump.isUnlocked) maxJumpCount = 1;
         MovementSpeedUnlock();
@@ -123,7 +123,11 @@ public class PlayerMoveMain : MonoBehaviour
             PlayerBody.velocity = new Vector2(moveDirection * movementSpeed, PlayerBody.velocity.y);
             if (isJumping && (jumpsAvailable > 0 || isGrounded))
             {
-                AudioController.instance.PlaySFX(clip);
+                if (AudioController.instance != null)
+                {
+                    // Should be fixed in the future currently has issues
+                    AudioController.instance.PlaySFX(clip);
+                }
 
                 PlayerBody.velocity = new Vector3(PlayerBody.velocity.x, 0, 0);
                 if (gravityState) value = -jumpForce; else value = jumpForce;

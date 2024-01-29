@@ -1,7 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System; // For Action
+using System;
 
 public class FlipScript : MonoBehaviour
 {
@@ -23,7 +22,7 @@ public class FlipScript : MonoBehaviour
     void Update()
     {
         isFlipEnabled = Dash.isMovementEnabled;
-        if (Input.GetKeyDown("j") && !isFlipOnCooldown && isFlipEnabled)
+        if (Input.GetKeyDown("f") && !isFlipOnCooldown && isFlipEnabled)
         {
             Flip();
             

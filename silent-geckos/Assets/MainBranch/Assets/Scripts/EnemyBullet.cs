@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EnemyBullet : MonoBehaviour
 {
@@ -21,7 +18,6 @@ public class EnemyBullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.right * speed * GameObject.FindWithTag("EnemyRanged").transform.localScale.x / -5;

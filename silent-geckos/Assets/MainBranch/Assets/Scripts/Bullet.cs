@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -19,7 +17,6 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         rb.velocity = transform.right * speed * GameObject.FindWithTag("Player").transform.localScale.x/5;
@@ -38,7 +35,10 @@ public class Bullet : MonoBehaviour
             Destroy(hitInformation.gameObject);
             Destroy(gameObject);
         }
-        else if (hitInformation.gameObject.CompareTag("EnemyRanged")) ;
+        else if (hitInformation.gameObject.CompareTag("EnemyRanged"))
+        {
+            // Not sure what the main indention was here, but I'm assuming it was to make the bullet disappear.
+        }
         else if (!hitInformation.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);

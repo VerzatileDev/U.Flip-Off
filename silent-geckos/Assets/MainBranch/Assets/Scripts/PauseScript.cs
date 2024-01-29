@@ -1,5 +1,4 @@
-﻿using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
@@ -9,21 +8,18 @@ public class PauseScript : MonoBehaviour
     [SerializeField] private AudioClip clip;
 
     // SCENES to load
-    [SerializeField] private Object mainMenuScene;
+    [SerializeField] private string mainMenuSceneName;
 
     public void toMainMenu()
     {
         Time.timeScale = 1f; // Ensure time scale is set to normal speed before loading the new scene
-
-        if (mainMenuScene != null && mainMenuScene is SceneAsset)
+        if (!string.IsNullOrEmpty(mainMenuSceneName))
         {
-            SceneAsset sceneAsset = (SceneAsset)mainMenuScene;
-            string sceneName = sceneAsset.name;
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(mainMenuSceneName);
         }
         else
         {
-            Debug.LogError("Main menu scene is not assigned or is not a valid SceneAsset.");
+            Debug.LogError("Main menu scene name is not specified.");
         }
 
     }

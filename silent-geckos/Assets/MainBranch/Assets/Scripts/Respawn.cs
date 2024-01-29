@@ -26,27 +26,48 @@ public class Respawn : MonoBehaviour
             // Set IsFreshStart to false to indicate that the game is not starting fresh next time
             GameManager.IsFreshStart = false;
             // Set the player's initial position when starting the game fresh
-            player.transform.position = GameManager.InitialPlayerPosition;
+            checkPointdata.Wipe();
+            if (player != null)
+            {
+                player.transform.position = GameManager.InitialPlayerPosition;
+            }
+            else
+            {
+                Debug.LogError("Player GameObject not found.");
+            }
         }
         else
         {
-            // Respawn the player at the last checkpoint when the game is not starting fresh
-            RespawnPlayerAtCheckpoint();
+            if (player != null && checkPointdata != null)
+            {
+                RespawnPlayerAtCheckpoint();
+            }
+            else
+            {
+                Debug.LogError("Player or CheckpointData is not properly initialized.");
+            }
         }
 
     }
 
     private void RespawnPlayerAtCheckpoint()
     {
+
         if (checkPointdata.checkpoint3 == true)
         {
             player.transform.position = checkPointdata.position;
             checkPointdata.Respawn(scoreDataSo);
             Debug.Log("3");
             goodScore += scoreDataSo.heavenCoins;
-            goodCounter.text = goodScore.ToString();
+            if (goodCounter != null) // Becasue stupid bug
+            {
+                goodCounter.text = goodScore.ToString();
+            }
             evilScore += scoreDataSo.hellCoins;
-            evilCounter.text = evilScore.ToString();
+            if (evilCounter != null)
+            {
+                evilCounter.text = evilScore.ToString();
+            }
             OnRespawn?.Invoke();
             if (checkPointdata.inHell == true)
             {
@@ -61,9 +82,15 @@ public class Respawn : MonoBehaviour
             checkPointdata.Respawn(scoreDataSo);
             Debug.Log("2");
             goodScore += scoreDataSo.heavenCoins;
-            goodCounter.text = goodScore.ToString();
+            if (goodCounter != null)
+            {
+                goodCounter.text = goodScore.ToString();
+            }
             evilScore += scoreDataSo.hellCoins;
-            evilCounter.text = evilScore.ToString();
+            if (evilCounter != null)
+            {
+                evilCounter.text = evilScore.ToString();
+            }
             OnRespawn?.Invoke();
             if (checkPointdata.inHell == true)
             {
@@ -79,9 +106,15 @@ public class Respawn : MonoBehaviour
             checkPointdata.Respawn(scoreDataSo);
             Debug.Log("1");
             goodScore += scoreDataSo.heavenCoins;
-            goodCounter.text = goodScore.ToString();
+            if (goodCounter != null)
+            {
+                goodCounter.text = goodScore.ToString();
+            }
             evilScore += scoreDataSo.hellCoins;
-            evilCounter.text = evilScore.ToString();
+            if( evilCounter != null)
+            {
+                evilCounter.text = evilScore.ToString();
+            }
             OnRespawn?.Invoke();
             if (checkPointdata.inHell == true)
             {

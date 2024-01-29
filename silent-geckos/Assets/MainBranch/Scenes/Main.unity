@@ -4867,6 +4867,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7600193053196158730, guid: 485b42897a9adc8458ef340104fe7351,
+        type: 3}
+      propertyPath: inHell
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7600193053196158734, guid: 485b42897a9adc8458ef340104fe7351,
         type: 3}
       propertyPath: m_Name
@@ -26777,7 +26782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07947917, y: 0.8543332}
   m_AnchorMax: {x: 0.17583334, y: 1.0627747}
-  m_AnchoredPosition: {x: -3, y: -65.49658}
+  m_AnchoredPosition: {x: -3, y: -65.49689}
   m_SizeDelta: {x: -5, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1416627688
@@ -40471,6 +40476,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 102900000, guid: 41d312d48e763e9409dbc12dd4e71383,
         type: 3}
+    - target: {fileID: 6231190346968841659, guid: 41f03c0d53137ad43a0e6e255bc58b52,
+        type: 3}
+      propertyPath: mainMenuSceneName
+      value: MainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 6231190346968841662, guid: 41f03c0d53137ad43a0e6e255bc58b52,
         type: 3}
       propertyPath: m_Enabled

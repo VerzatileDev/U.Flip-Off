@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20f;
     public Rigidbody2D rb;
-    private float lifeTime = 1f;
+    private float lifeTime = 10f;
     private void Awake()
     {
         StartCoroutine(Die());
@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        rb.velocity = transform.right * speed * GameObject.FindWithTag("Player").transform.localScale.x/5;
+        rb.velocity = transform.right * speed;
     }
 
     void Update()

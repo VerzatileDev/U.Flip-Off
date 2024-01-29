@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7479916458814391547}
   m_RootOrder: 1
@@ -92,6 +93,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.1, y: 1.71, z: 479.6003}
   m_LocalScale: {x: 5, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7479916458997209797}
   - {fileID: 2400775294881588056}
@@ -109,10 +111,12 @@ SpriteRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -162,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: dcf50ec80141a2f4297e659ab6e92128, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 7479916458814391544}
   animator: {fileID: 2763792187882040380}
   firePoint: {fileID: 7479916458997209797}
   bullet: {fileID: 6528657511118381045, guid: 0a132b6e37066d94cb5d2d7445e5a097, type: 3}
@@ -272,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 3c4088aaa7f7e56499de288aec89e953, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 7479916458814391544}
 --- !u!114 &5120452412221582360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 146abf01fa4684b4e98acbd992fb2071, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 7479916458814391544}
   isDashOnCooldown: 0
   dashCooldown: 1
   dash: {fileID: 11400000, guid: 396c67b541dbc924b9c65736b42b93b6, type: 2}
@@ -294,7 +298,7 @@ MonoBehaviour:
   dash2: {fileID: 11400000, guid: c942938a64cd571499a0da319325ef7c, type: 2}
 --- !u!95 &2763792187882040380
 Animator:
-  serializedVersion: 3
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -307,10 +311,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7479916458997209796
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,8 +341,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7479916458997209796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.13, y: 0.064, z: 0}
+  m_LocalPosition: {x: 0.183, y: 0.064, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7479916458814391547}
   m_RootOrder: 0

@@ -4531,14 +4531,14 @@ Transform:
   - {fileID: 653906249}
   - {fileID: 387168975}
   - {fileID: 345973818}
-  - {fileID: 370599613}
   - {fileID: 418778073}
+  - {fileID: 370599613}
   - {fileID: 962621323}
   - {fileID: 1815256719}
   - {fileID: 1345584238}
-  - {fileID: 1022886256}
-  - {fileID: 319739260}
   - {fileID: 554209871}
+  - {fileID: 319739260}
+  - {fileID: 1022886256}
   - {fileID: 727931525}
   m_Father: {fileID: 0}
   m_RootOrder: 28
@@ -15786,7 +15786,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 134.2
+  m_fontSize: 200
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15853,7 +15853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.20556252, y: 0.8605555}
   m_AnchorMax: {x: 0.29968742, y: 1.0699228}
-  m_AnchoredPosition: {x: -2, y: -73.76024}
+  m_AnchoredPosition: {x: -2, y: -73.760254}
   m_SizeDelta: {x: 0, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &867360542
@@ -26835,7 +26835,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 141.15
+  m_fontSize: 200
   m_fontSizeBase: 200
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -40463,7 +40463,7 @@ PrefabInstance:
     - target: {fileID: 6231190346968841658, guid: 41f03c0d53137ad43a0e6e255bc58b52,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6231190346968841659, guid: 41f03c0d53137ad43a0e6e255bc58b52,
         type: 3}

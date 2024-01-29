@@ -19,10 +19,6 @@ public class AudioController : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     private void Start()

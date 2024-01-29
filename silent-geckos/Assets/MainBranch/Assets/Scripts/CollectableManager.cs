@@ -12,7 +12,10 @@ public class CollectableManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            AudioController.instance.PlaySFX(clip);
+            if (AudioController.instance != null)
+            {
+                AudioController.instance.PlaySFX(clip);
+            }
 
             if (isGood == true)
             {

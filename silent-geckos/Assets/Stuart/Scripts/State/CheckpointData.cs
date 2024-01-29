@@ -61,4 +61,5 @@ public class CheckpointData : ScoreDataSO
         scoreDataSO.hellCoins = hellCoins;
         scoreDataSO.progressBar = progressBar;
     }
+
 }

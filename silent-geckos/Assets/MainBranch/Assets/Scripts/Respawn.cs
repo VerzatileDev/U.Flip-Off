@@ -17,6 +17,27 @@ public class Respawn : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        // Check if the game is starting fresh
+        bool isFreshStart = GameManager.IsFreshStart;
+
+        if (isFreshStart)
+        {
+            // Set IsFreshStart to false to indicate that the game is not starting fresh next time
+            GameManager.IsFreshStart = false;
+            // Set the player's initial position when starting the game fresh
+            player.transform.position = GameManager.InitialPlayerPosition;
+        }
+        else
+        {
+            // Respawn the player at the last checkpoint when the game is not starting fresh
+            RespawnPlayerAtCheckpoint();
+        }
+
+    }
+
+    private void RespawnPlayerAtCheckpoint()
+    {
         if (checkPointdata.checkpoint3 == true)
         {
             player.transform.position = checkPointdata.position;
@@ -70,4 +91,12 @@ public class Respawn : MonoBehaviour
             }
         }
     }
+
+
+    public static class GameManager
+    {
+        public static bool IsFreshStart { get; set; } = true;
+        public static Vector3 InitialPlayerPosition { get; set; } = new Vector3(68.2f, 6.3f, 479.6003f);
+    }
+
 }

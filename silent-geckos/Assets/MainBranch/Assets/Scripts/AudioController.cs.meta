@@ -3,7 +3,12 @@ guid: a99338c2958310e40b20f51652681b00
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - heaven: {instanceID: 0}
+  - hell: {instanceID: 0}
+  - mixer: {fileID: 24100000, guid: 109154df536a89e44a388ebca6eed7b6, type: 2}
+  - sfxSource: {instanceID: 0}
+  - buttonClickFX: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
